@@ -14,7 +14,7 @@ Report
 
 
 3. Conclusion
-- Discussion 
+- Discussion and Industry analysis
 - Limitation/Issues and weak points
 - Business Implications
 - Future Outlook

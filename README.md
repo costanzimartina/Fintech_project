@@ -2,7 +2,7 @@
 Progress about project
 
 
-### We met the fisrt time all the team on 25/11/2019
+### We met the first time all the team on 25/11/2019
 
 We discuss about the project and we decide the main idea of our project.
 We sketch it on a paper that it is also available under the name of firs_sketch
