@@ -3,6 +3,7 @@ Report
 1. Introduction 
 - Problems with the current Car Insurance Market 
 - What is going on in the Industry of Insurances /InsurTech
+- Maybe prospects as well 
 
 2. Projectgoals
 - Main Idea to solve mentioned issues 
