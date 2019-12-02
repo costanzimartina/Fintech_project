@@ -1,0 +1,62 @@
+pragma solidity ^0.5.1;
+
+contract PoliceReport {
+    
+    string public firstVehicle;
+    string public secondVehicle;
+    string public fault;
+    string public description;
+    uint256 public damage;
+    uint256 public time = block.timestamp;
+    address owner;
+    
+    // here only the owner (the police) can deploy the contract
+    modifier OnlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
+    // setting the owner
+    constructor() public {
+        owner = msg.sender;
+    }
+    // only the owner can add info to the report
+    function addVehicles(
+        string memory _firstVehicle,
+        string memory _secondVehicle
+        )
+    public
+    OnlyOwner
+    {
+        firstVehicle = _firstVehicle;
+        secondVehicle = _secondVehicle;
+    }
+    
+    function addDamage(
+        uint256 _damage
+        )
+    public
+    OnlyOwner
+    {
+        damage = _damage;
+    }
+    
+    function addFault(
+        string memory _fault
+        )
+    public
+    OnlyOwner
+    {
+        fault = _fault; 
+    }
+    
+    function addDescription(
+        string memory descr
+        )
+    public 
+    OnlyOwner
+    {
+        description = descr;
+    }
+        
+}
+
