@@ -1,7 +1,6 @@
 # Fintech_project
 Progress about project
 
-Progress about project
 
 ### We met the fisrt time all the team on 25/11/2019
 
