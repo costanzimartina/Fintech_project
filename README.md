@@ -26,6 +26,8 @@ that everyone will contribute to every part of this project
 We discuss about the next steps and we decide together the index of our report and then we started to write it.
 Vittorio and I (Martina) will focus more on the coding part and Sharlyn, Mirko and Paula will focus more on the report. But every one knows what's going on and everyone gives his or her contribution to both parts. 
 
+### We sent an e-mail to Benedetta to inform her about our progress 2/12/2019
+
 ### first smart contract 2/12/2019
 The code inside Insurance.txt is the first raw version of the Police Report. The contract contains information such as:
   - first vehicle
