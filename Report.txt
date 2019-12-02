@@ -12,8 +12,8 @@ Report
 
 
 3. Conclusion
-- Discussion
-- Limitation/Issues 
+- Discussion 
+- Limitation/Issues and weak points
 - Business Implications
 - Future Outlook
 
