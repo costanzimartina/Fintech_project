@@ -19,8 +19,11 @@ In the repository you will have:
 (- we also aim to do brief ppt)
 
 
+### We met the second time all the team on 2/12/2019
+We discuss about the next steps and we decide together the index of our report and then we started to write it.
+Vittorio and I (Martina) will focus more on the coding part and Sharlyn, Mirko and Paula will focus more on the report. But every one knows what's going on and everyone gives his or her contribution to both parts. 
 
-### first commit -- Vittorio Colombo
+### first smart contract 2/12/2019
 The code inside Insurance.txt is the first raw version of the Police Report. The contract contains information such as:
   - first vehicle
   - second vehicle
@@ -31,11 +34,6 @@ The code inside Insurance.txt is the first raw version of the Police Report. The
   
 Only the Police can modify the existing contract, I have done it via the modfifier OnlyOwner. In fact, if you deploy the contract 
 using one account, and then switch to another and try to modify values stored inside it, it will raise an error.
-
-### We met the second time all the team on 2/12/2019
-We discuss about the next steps and we decide together the index of our report and then we started to write it.
-Vittorio and I (Martina) will focus more on the coding part and Sharlyn, Mirko and Paula will focus more on the report. But every one knows what's going on and everyone gives his or her contribution to both parts. 
-
 
 
 
