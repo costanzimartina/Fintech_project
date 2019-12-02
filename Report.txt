@@ -1,0 +1,18 @@
+Report 
+
+1. Introduction 
+- Problems with the current Car Insurance Market 
+- What is going on in the Industry of Insurances /InsurTech
+
+2. Projectgoals
+- Main Idea to solve mentioned issues 
+- Scrutinise the process (tasks of the nodes, authentication etc.)
+- Assess Proposal and what has been done 
+- Explain the code in the smart contract 
+
+
+3. Conclusion
+- Discussion
+- Limitation/Issues 
+- Business Implications
+- Future Outlook
