@@ -16,6 +16,9 @@ In the repository you will have:
 - A folder with progress of the coding part
 - A folder with the progress and all the notes in word-style that every one can upload or download 
 - A Report that every one can edit 
+- A txt file in which we write all the references
+- A txt in which at end we will write the contribution of each person, but I am sure 
+that everyone will contribute to every part of this project
 (- we also aim to do brief ppt)
 
 
