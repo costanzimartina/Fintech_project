@@ -1,10 +1,21 @@
-Report 
+# Report 
 
-1. Introduction 
-- Problems with the current Car Insurance Market 
-- What is going on in the Industry of Insurances /InsurTech
+## Introduction 
+
+
+
+- **Problems with the current Car Insurance Market** 
+- **What is going on in the Industry of Insurances /InsurTech 1/2**
 - Maybe prospects as well 
 - Lemonade and b3i
+
+The current Insurance market is flawed with a lot of difficulties that leads to dissatisfaction of its customers. Apart from being too expensive, the process is also highly complex and far away from a user-friendly experience. The chances of getting paid out by an insurance are at 5% and on top of that it is not even clear how much is covered. To the defense of insurance companies, the system allows opportunities to play the system and exploit betterment. Therefore, a simplified and transparent solution is much needed. 
+
+Due to recent technological development, the insurance market falls under the rader for a technological advancement. The apparent issues make rum for InsurTech startups that attempt to disrupt the market with digitalized systems and blockchain technologies. ``maybe some more numbers here``
+
+Despite the high initial investment cost for blockchain based systems ``source needed here again to back this up`` , the first real world implementations are going to market in the beginning of 2020. Established by a cooperation of insurances and ``       `` , *B3i* is building a platform on distributed ledger technology to  create a "single source of truth" opposing to decentralized and obscure data systems. The ambition is to be able to optimise the  processes in the market  and reduce the costs significantly. This first implementaiton will be applied in the reinsurance market, due to ``.... find on website again``.
+
+ 
 
 2. Projectgoals
 - Main Idea to solve mentioned issues 
@@ -15,8 +26,14 @@ Report
 
 3. Conclusion
 - Discussion and Industry analysis
+  - Competitors
+  - Potential barriers to entry
+  - 5 Forces? Nah (my opinion)
+  - 
 - Limitation/Issues and weak points
+  - 
 - Business Implications
 - Future Outlook
+  - Where do we go from here? Sensors?
 
 
