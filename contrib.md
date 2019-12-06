@@ -2,7 +2,7 @@
 
 12/02 - Contributions file - Paula
 
-12/02 - Report file - Sharlin
+12/02 - Report file - Sharlin, Paula, Mirco
 
 12/02 - Research about insuretech - Sharlin
 
