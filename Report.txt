@@ -24,7 +24,7 @@ Despite the high initial investment cost for blockchain based systems ``source n
 - Lemonade and b3i ## SAME
 
 
-2. Projectgoals
+2. ### Project Goals
 
 The purpose of our project is to propose a solution that aims to solve different problems in the procedure that start from the creation of a car insurance contract to the expiration of the contract itself, passing through the management of a car accident and all the related practices. The major goal and the focus is on making the procedure more efficient and safe in order to reduce the operating costs an the costs related to frauds.
 
@@ -45,7 +45,7 @@ The purpose of our project is to propose a solution that aims to solve different
 - Explain the code in the smart contract 
 
 
-3. Conclusion
+3. ### Conclusion
 - Discussion and Industry analysis
   - Competitors
   - Potential barriers to entry
