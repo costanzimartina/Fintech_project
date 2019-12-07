@@ -45,16 +45,11 @@ The purpose of our project is to propose a solution that aims to solve different
 - Explain the code in the smart contract 
 
 
-3. ### Conclusion
-- Discussion and Industry analysis
-  - Competitors
-  - Potential barriers to entry
-  - 5 Forces? Nah (my opinion)
-  - 
-- Limitation/Issues and weak points
-  - 
-- Business Implications
-- Future Outlook
-  - Where do we go from here? Sensors?
 
+## **Industry Analysis & Discussion**
+
+-Competitors in the Car insurance mkt (insurance vs insurtech)
+-Market analysis and barriers to entry
+-The economics behind our idea: where do we generate value, who should endorse it (police, already existing insurance companies? close the gap for missing info -> More efficient)
+-Outlook: How to improve the idea and where do we go from here? Sensors, make it fully decentralised? 
 
