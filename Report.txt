@@ -14,19 +14,19 @@ Just to provide you with some data, despite the fact that a car insurance can be
 From the other side, in defence of insurance companies, the system allows - very often - opportunities to play the system and exploit betterment. Therefore a solution that leverages transparency and the safeness is needed and it can improve both the customer experience, reducing the costs and and making the refunding procedure faster and more efficient, and the internal operations of insurance companies, that can reduce costs related to frauds that according to the FBI the total damages of insurance fraud exceed $40 billion per year (considering all type of insurances) and they can also streamline the procedure reducing the operating costs. 
 
 ##ADDING DATA ######
-Due to recent technological development, the insurance market falls under the rader for a technological advancement. The apparent issues make rum for InsurTech startups that attempt to disrupt the market with digitalized systems and blockchain technologies that seem particularly suitable in order to address the previous mentioned problems. ``maybe some more numbers here``
+Due to recent technological development, the insurance market falls under the radar for a technological advancement. The apparent issues make room for InsurTech startups that attempt to disrupt the market with digitalized systems and blockchain technologies that seem particularly suitable in order to address the previous mentioned problems. ``maybe some more numbers here``
 
 #ADDING DATA AND SOME COMPETITORS, WHAT’S GOING ON IN THE SYSTEM??? ####
-Despite the high initial investment cost for blockchain based systems ``source needed here again to back this up`` , the first real world implementations are going to market in the beginning of 2020. Established by a cooperation of insurances and ``       `` , *B3i* is building a platform on distributed ledger technology to  create a "single source of truth" opposing to decentralized and obscure data systems. The ambition is to be able to optimise the  processes in the market  and reduce the costs significantly. This first implementaiton will be applied in the reinsurance market, due to ``.... find on website again``.
+Despite the high initial investment cost for blockchain based systems ``source needed here again to back this up`` , the first real world implementations are going to market in the beginning of 2020. Established by a cooperation of insurances and ``       `` , *B3i* is building a platform on distributed ledger technology to  create a "single source of truth" opposing to decentralized and obscure data systems. The ambition is to be able to optimise the  processes in the market  and reduce the costs significantly. This first implementation will be applied in the reinsurance market, due to ``.... find on website again``.
 
 - **What is going on in the Industry of Insurances /InsurTech 1/2**
 - Maybe prospects as well ###NOT TOO LONG because you have the same point at the end
 - Lemonade and b3i ## SAME
- 
 
-2. Projectgoals
 
-The propose of our project is to propose a solution that aims to solve different problems in the procedure that start from the creation of a car insurance contract to the expiration of the contract itself, passing through the management of a car accident and all the related practices. The major goal and the focus is on making the procedure more efficient and safe in order to reduce the operating costs an the costs related to frauds.
+2. ### Project Goals
+
+The purpose of our project is to propose a solution that aims to solve different problems in the procedure that start from the creation of a car insurance contract to the expiration of the contract itself, passing through the management of a car accident and all the related practices. The major goal and the focus is on making the procedure more efficient and safe in order to reduce the operating costs an the costs related to frauds.
 
 
 ####Creation of a smart contract
@@ -45,16 +45,11 @@ The propose of our project is to propose a solution that aims to solve different
 - Explain the code in the smart contract 
 
 
-3. Conclusion
-- Discussion and Industry analysis
-  - Competitors
-  - Potential barriers to entry
-  - 5 Forces? Nah (my opinion)
-  - 
-- Limitation/Issues and weak points
-  - 
-- Business Implications
-- Future Outlook
-  - Where do we go from here? Sensors?
 
+## **Industry Analysis & Discussion**
+
+-Competitors in the Car insurance mkt (insurance vs insurtech)
+-Market analysis and barriers to entry
+-The economics behind our idea: where do we generate value, who should endorse it (police, already existing insurance companies? close the gap for missing info -> More efficient)
+-Outlook: How to improve the idea and where do we go from here? Sensors, make it fully decentralised? 
 

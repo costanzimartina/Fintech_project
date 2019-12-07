@@ -88,7 +88,45 @@ o  No matter how much the insurance pays out, the bottom line stays the same
 
 \-    **Secure** distributed ledger technology ensures greater security for transactions on the node due to its decentralised nature and immutability.
 
- 
+
+
+## **Potential Competitors**
+
+
+
+**Acko General Insurance** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Metromile**
+
+Metromile offers a pay-per-mile car  insurance model and uses data to optimize how they use their car to  provide instant access to detailed vehicle diagnostics via the driving  app.
+
+**Friday**
+
+Friday  provides a usage-based insurance  platform for car owners. It provides premiums based on miles traveled  and also offers discounts on insurance. The pay-per-kilometer of Friday is  targeted towards low-driver, second-car drivers and customers who like  flexibility and fairness.
+
+**Zego**
+
+Zego provides an online platform to  purchase on-demand car/motorbike insurance to the delivery drivers.  Users can get them insured for the time they are delivering the  goods/products. Zego offers insurance on a per hour basis and starts its premium from £0.65 per hour.
+
+
+
+
 
  
 
