@@ -3,21 +3,25 @@ pragma solidity ^0.5.1;
 contract PoliceReport {
     
     string public firstVehicle;
-    string public secondVehicle;
-    string public fault;
+    string public secondVehicle; //you can add vehicles if there are more then 2
+    string public fault; // la fault la mettiamo come percentuale, di solito non è mai colpa solo di una persona
     string public description;
-    uint256 public damage;
+    uint256 public damage;  //the amount of damage
+    //aggiungere il danno al veicolo 2
+    //aggiungere gli ID delle persone coinvolte (codice identificativo patente)
+    //in modo tale che sia possibile aggiornare il tutto
     uint256 public time = block.timestamp;
-    address owner;
+    address owner; //owner is the police
     
     // here only the owner (the police) can deploy the contract
     modifier OnlyOwner() {
         require(msg.sender == owner);
         _;
     }
+
     // setting the owner
     constructor() public {
-        owner = msg.sender;
+        owner = msg.sender; //
     }
     // only the owner can add info to the report
     function addVehicles(
@@ -60,3 +64,10 @@ contract PoliceReport {
         
 }
 
+// Come leggere ed aggiornare dati =external data feed
+// la struttura da utilizzare per il report personale (dictionary)
+// Come si fa in solidity a specificare quali sono i nodi autorizzati 
+//
+
+//creare un contratto privato, che ogni utente deve creare appena presa la patente
+//però solo nodi esterni possono convalidare i dati.
