@@ -24,11 +24,11 @@ that everyone will contribute to every part of this project
 
 ### We met the second time all the team on 2/12/2019
 We discuss about the next steps and we decide together the index of our report and then we started to write it.
-Vittorio and I (Martina) will focus more on the coding part and Sharlyn, Mirko and Paula will focus more on the report. But every one knows what's going on and everyone gives his or her contribution to both parts. 
+Vittorio and I (Martina) will focus more on the coding part and Sharlyn,Mirko and Paula will focus more on the report. But every one knows what's going on and everyone gives his or her contribution to both parts, and I will try to coordinate everything at my best. 
 
-### We sent an e-mail to Benedetta to inform her about our progress 2/12/2019
+### I sent an e-mail to Benedetta to inform her about our progress 2/12/2019
 
-### first smart contract 2/12/2019
+### First smart contract 2/12/2019 
 The code inside Insurance.txt is the first raw version of the Police Report. The contract contains information such as:
   - first vehicle
   - second vehicle
@@ -39,6 +39,14 @@ The code inside Insurance.txt is the first raw version of the Police Report. The
   
 Only the Police can modify the existing contract, I have done it via the modfifier OnlyOwner. In fact, if you deploy the contract 
 using one account, and then switch to another and try to modify values stored inside it, it will raise an error.
+
+### Second smart contract
+
+
+
+### Some updates 8/12/2019
+We discuss about what is going on, everyone is working on his or her part. Everyone have uploaded what they have written until now, and we still working on the coding part. I have booked an office hour with the professor on Monday to disccuss about the coding part. 
+
 
 
 
