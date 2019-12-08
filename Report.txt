@@ -4,24 +4,28 @@
 
 
 
-- **Problems with the current Car Insurance Market** 
-
-
-This project aims to address some problems in the car insurance field and to propose a new way to manage this huge business based on a blockchain system and smart contracts. 
 
 The current insurance market presents many negative and controversial aspects that lead to customer dissatisfaction. Just to mention some problems, the price of a car insurance may vary a lot depending on several factors, but in general, considering the fact that the user does not perceive a tangible value or a real experience from it, a car insurance may seem very expensive. Furthermore the process and the contracts themselves can be highly complex and far away from a user-friendly experience and on top of this it can be very easy for an insurance company to write contracts in their favour. 
 Just to provide you with some data, despite the fact that a car insurance can be very expensive the chances of getting paid out by an insurance are at 5% and it is not even clear how much is covered, moreover just 60%-70% of premia are spent on damages, the 20% is spent on sales an the remaining percentage on the other kind of costs. 
 From the other side, in defence of insurance companies, the system allows - very often - opportunities to play the system and exploit betterment. Therefore a solution that leverages transparency and the safeness is needed and it can improve both the customer experience, reducing the costs and and making the refunding procedure faster and more efficient, and the internal operations of insurance companies, that can reduce costs related to frauds that according to the FBI the total damages of insurance fraud exceed $40 billion per year (considering all type of insurances) and they can also streamline the procedure reducing the operating costs. 
 
-##ADDING DATA ######
-Due to recent technological development, the insurance market falls under the radar for a technological advancement. The apparent issues make room for InsurTech startups that attempt to disrupt the market with digitalized systems and blockchain technologies that seem particularly suitable in order to address the previous mentioned problems. ``maybe some more numbers here``
+Due to recent technological development, the insurance market falls under the radar for a technological advancement. A recent report about the Global InsurTech market revealed that the market is expected to grow by $15.63 Billion from 2018 to 2023. This translates to an estimated year-over-year growth of more than 45% for 2019. * $^3$ The apparent issues make room for InsurTech startups that attempt to disrupt the market with digitalized systems. 
 
-#ADDING DATA AND SOME COMPETITORS, WHAT’S GOING ON IN THE SYSTEM??? ####
-Despite the high initial investment cost for blockchain based systems ``source needed here again to back this up`` , the first real world implementations are going to market in the beginning of 2020. Established by a cooperation of insurances and ``       `` , *B3i* is building a platform on distributed ledger technology to  create a "single source of truth" opposing to decentralized and obscure data systems. The ambition is to be able to optimise the  processes in the market  and reduce the costs significantly. This first implementation will be applied in the reinsurance market, due to ``.... find on website again``.
+A seemingly suitable solution for the mentioned issues of the insurance market are blockchain based technologies. Due to their immutability and transparancy, blockchain based databases should reduce administration costs and due to their immutability also the risk of fraud. Additionally, the implementation of smart contracts allows for an automated way of payment. Considering that in the traditional insurance system, payment for claims take weeks or even months, an instant, automated transaction would be a big advancement. Considering the high initial investment cost to implement such a system, the first implementation of smart contracts are likely to be seen in markets with large short-tail risks, such as catastrophe or property risks, the  before advancing to long-tail risks and retail markets.*
 
-- **What is going on in the Industry of Insurances /InsurTech 1/2**
-- Maybe prospects as well ###NOT TOO LONG because you have the same point at the end
-- Lemonade and b3i ## SAME
+One of the first implementations in the insurance sector are going to market in the beginning of 2020. Owned by a cooperation of 18 insurance market participants around the globe, *B3i* is building a platform on distributed ledger technology to  create a "single source of truth" opposing to decentralized and obscure data systems. The ambition is to be able to optimise the  processes in the market  and reduce the costs significantly. 
+
+ B3i's concept is that every node processes and verifies each activity. In this way, there exisits a common consensus about the validity of a transaction. Furthermore, every entry on the ledger are immutable to ensure transparency and trust. Through smart contracting asset transfers are automatically validated and enforced, while they ensure that only the nodes involved in the transaction can access the information. 
+
+A blockchain-based approach is very innovative in the insurance market and finds its first application with B3i on the reinsurance market. '``Ending depends on how 2nd part continues``
+
+This project aims to adress some of the issues linked to the insureance market by implementing a blockchain based smart contracting in the field of car insurances. 
+
+- **Problems with the current market** 
+
+- **What is going on in the Industry of Insurances /InsurTech** 
+- **Maybe prospects as well ###NOT TOO LONG because you have the same point at the end**
+- **b3i ## SAME**
 
 
 2. ### Project Goals
@@ -52,4 +56,18 @@ The purpose of our project is to propose a solution that aims to solve different
 -Market analysis and barriers to entry
 -The economics behind our idea: where do we generate value, who should endorse it (police, already existing insurance companies? close the gap for missing info -> More efficient)
 -Outlook: How to improve the idea and where do we go from here? Sensors, make it fully decentralised? 
+
+
+
+
+
+# References
+
+-  https://www.nortonrosefulbright.com/en/knowledge/publications/88244592/the-future-of-smart-contracts-in-insurance
+
+- https://b3i.tech/
+
+  
+
+- https://www.technavio.com/report/global-insurtech-market-industry-analysis
 
