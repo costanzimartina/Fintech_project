@@ -27,11 +27,21 @@ This project aims to adress some of the issues linked to the insureance market b
 - **Maybe prospects as well ###NOT TOO LONG because you have the same point at the end**
 - **b3i ## SAME**
 
+## Project
 
-2. ### Project Goals
+#### Project Goals
 
 The purpose of our project is to propose a solution that aims to solve different problems in the procedure that start from the creation of a car insurance contract to the expiration of the contract itself, passing through the management of a car accident and all the related practices. The major goal and the focus is on making the procedure more efficient and safe in order to reduce the operating costs an the costs related to frauds.
 
+#### Main Idea
+
+The adoption of modern technologies such as blockchain in insurance can address the different inefficiencies that are involved in the business. Blockchain-based networks can secure customer data and automate payments through smart contracts, and therefore enhance productivity and customer experience and prevent frauds.
+
+This is why we propose in this project the automation of the auto insurance process by the use of a descentralized Blockchain system, where people in the network support each other’s risk, instead of the whole process being ran by the insurer (third party). In this way, our private/permissioned Blockchain would permit us to automate claims processing using smart contracts with specific business rules that are detailed later on. 
+
+#### Process Flow 
+
+Explanation of the process flow and implications (tasks of the nodes, authentication etc.)
 
 ####Creation of a smart contract
 
@@ -41,12 +51,13 @@ The purpose of our project is to propose a solution that aims to solve different
 
 ####Solving the contract 
 
+#### Code Overview
 
+Explain the code in the smart contract 
 
-- Main Idea to solve mentioned issues 
-- Scrutinise the process (tasks of the nodes, authentication etc.)
-- Assess Proposal and what has been done 
-- Explain the code in the smart contract 
+#### Proposal Assessment
+
+Assess Proposal and what has been done 
 
 
 
