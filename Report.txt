@@ -4,7 +4,6 @@
 
 
 
-
 The current insurance market presents many negative and controversial aspects that lead to customer dissatisfaction. Just to mention some problems, the price of a car insurance may vary a lot depending on several factors, but in general, considering the fact that the user does not perceive a tangible value or a real experience from it, a car insurance may seem very expensive. Furthermore the process and the contracts themselves can be highly complex and far away from a user-friendly experience and on top of this it can be very easy for an insurance company to write contracts in their favour. 
 Just to provide you with some data, despite the fact that a car insurance can be very expensive the chances of getting paid out by an insurance are at 5% and it is not even clear how much is covered, moreover just 60%-70% of premia are spent on damages, the 20% is spent on sales an the remaining percentage on the other kind of costs and finally the procedures take a very long time. 
 From the other side, in defence of insurance companies, the system allows - very often - opportunities to play the system and exploit betterment. Therefore a solution that leverages transparency and the safeness is needed and it can improve both the customer experience, reducing the costs and and making the refunding procedure faster and more efficient, and the internal operations of insurance companies, that can reduce costs related to frauds that according to the FBI - the total damages of insurance fraud - exceed $40 billion per year (considering all type of insurances) and they can also streamline the procedure reducing the operating costs. 
@@ -61,48 +60,118 @@ Assess Proposal and what has been done
 
 
 
-## **The Economics behind it**
+# **The Economics behind it**
 
-!!!! {Here am going to talk about the benefits in monetary terms of our idea: what 
-      issues of normal insurance could be made more efficient with our idea, why should
-      they adopt it, how it normally works and where ours - here a couple of graphs in 
-      the slides would be good - make it work better, potential costs saved}  !!!!
+Blockchain can help insurers deliver on streamlined subrogation, a more transparent claims process, and support more efficient payments between insurers and third parties, especially during the claims process. Such breakthrough leads to lowering operational cost and automated redundant processes indeed, while providing more sophisticated pricing through distributed loss histories prospective customers. In the specific case of vehicle insurance, blockhain and smart contracts can assist drivers in getting more affordable quotes (lower premiums as a result of a more efficient business model...) and resolve their accident claims faster (authomatic payment of claims through smart contracts).
 
-+ Bit of competition mkt analysis Competitors in the Car insurance mkt (insurance vs insurtech):
-  - Why our idea is better than normal insurance (mentioned above already though)
-  - Why is it better than online insurance (that already saves costs)?			                	Genialloyd,Quixa, Zurich Assicurazioni 
+* We cannot know how expenses in the insurance industry affect the premiums paid by customers, but what's certain is that part of the payment to the service provided to the client comes in the form of ordinary/administrative expenses (related to underwriting process, claim processing, etc). We assumed that as we decrease those expenses that are built inside the premium, clients would benefit from it by paying a lower amount each year and insurers would grow their customer base given a more efficient BM, which allows for lower quotes for clients and for more customers that can be managed. 
+
+#### Expenses figures
+
+Expenses incurred by 4 major listed insurance groups (net and as % of total expenses) --> Research done on Orbis database and IS seen on annual reports to investors of the companies.
+
+ALLIANZ
+
+- Administration expenses: €3,225m
+- Overall 13.11% of Total Expenses
+
+GENERALI
+
+- Administration and other expenses: €3,266m
+- Overall 7.09% of Total Expenses 
+
+JAPAN POST INSURANCE
+
+- Operating/admin expenses: $5738m
+- Overall 8% of Total expenses (as presented in JPI official IS)
+
+AXA
+
+- Administrative Expenses: €10,976m
+- Overall 10.49% of Total Expenses
+
+Insurance companies incur in administrative expenses that are mostly related to personnel and office expenses (namely claim processing, data gathering = time consuming practices). On average, in multiline* insurance companies these expenses account for 10% of the GWP (Gross Written Premium, the profit of insurance companies). 
+
+* I took multiline insurance companies as it is impossible with the data we have to find specific expenses for vehicle insurance incurred by firms. Multiline insurances (vehicle, property & casualty, etc) are here distinguished from life/health insurance.
+
+At the same time, non-life premium growths are globally on the rise, with the US leading the way with an increase of 2.7% of its premium for non-life insurances, with motor segment powering the advance (72.4% of total non-life premiums); followed by EMEA, which displayed a growth of 1.1% in 2018, below the 2.7% of 2017 but still above the 10-year average of 0.7%, and ASIA/PACIFIC, with a rise of 1.2% of its non-life premiums. Again, it shall be noted that I took non-life insurance premiums as proxies for vehicle insurance premiums as the data provided are limited: however, the validity of my approximation is given by the fact that the motor segment represent the largest slice of the premiums paid for non-life type of insurances (more than 70% in the US, ASIA/PACIFIC and EMEA). 
+
+What determines the fluctuations in the value of premium of an individual's insurance plan? Very _BASIC_ explanation (should find a better one...)
+
+* Insured behaviour --> Bonus/Malus mechanism of premium adjustment every year. Insureds' risk is assessed during the underwriting process whenever the insurer issues a new policy, and it is associated to a given category of risk, which is updated every year according to the its behavior (frequency and severity of claims).
+
+* Loading factor that reflects the insurer’s costs of operating the plan  (including administrative expenses and a return on investment) --> Here is where we strike! Lower the loading factor = Lower the premium. 
+
+* Frauds --> The industry continues to see a growing number of uninsured persons and valuables with fraudulent insurance cover. In the UK, for instance, most insurance company have attributed the high cost of car insurance to the rising cost of claims inclusive of fraudulent claims thereby increasing the cost inclusive for honest motorist. Just to provide some figures, fraudulent claims payment cost the insurance sector about $80 billion a year across all lines of insurance which is roughly about 20% of the total claims payment annually. --> We can help insurance firms with this issue too!
+
+  
+
+  Business automation is expected to reduce the cost of claims by over 30% --> Insurance businesses are looking for ways to retain customers and optimise profit. Some insurance companies that are already exploring ways to exploit this technology include Aegon, Allianz, Munich Re, and Swiss Re, which have already set up a combined pilot project known as B3i to explore blockchain. 
+
+  ### 														
+
+  ### 														Advantages of BT (and our idea)
 
 
 
+##### Claims processing 
+
+Insured individuals typically find insurance contracts long and confusing while the insurance companies are battling an extraordinary amount of fraud. Through blockchain and smart contracts, both parties would benefit from managing claims in a responsive and transparent way. 
+
+​																					SMART CONTRACTS
+
+* Customizable --> Custom smart contract code can accommodate the parameters of a policy and execute action automatically through trustless identity verification;
+
+* Authomatic --> The funds can then be automatically directed to the correct party when a verified event (a claim) triggers the digital contract on the blockchain; 
+
+* Fast and efficient --> Settling a claim can take days or weeks, and smart contracts can settle claims instantly (still we should take into account the *speed* of our blockchain) without the need for paper documents, photocopying, and complex web portals.
+
+  ​																			
+
+  ​																			 Why so important?
+
+Claims processing and management is one of the key business area for the insurance industry and the ability to promptly pay claim timely increases the reputation and trust by customers in purchasing insurance cover from such company. All claims processing undergoes three main process namely: 
+
+* Submission of the claim by the insured; 
+* Loss adjustment by the insurance company and other involved parties like the brokers and reinsurer 
+* Claims approval and payment.
+
+It usually takes time, what if we can authomate it all? Save operational expenses, impacting the IS of the firm, reducing the premium loading, becoming more competitive on the market, eventually growing the customer base and building trust with your clients.
+
+*Look at part 2 for the description of the mechanism* 
 
 
 
+##### Reduce inefficiencies 
+
+The  authomatic data-entry process of clients' information through SC (faster, more efficient, see how it works in the second part) makes the old practices obsolete, while guaranteeing security over the management of personal data of customers.
+
+- Overall improve trust in insurance companies. Sidenote: at the moment,  6.3% of Italian vehicles  are underinsured, we do not know whether that's purely related to lack of trust in financial services/insurance (I doubt about it...), but a more efficient and transparent system could anyway help insurance companies to restore trust and issue cheaper policies that pay claims within few days (is that it? how long would it take to our insurance to pay a claim through SC?)
+
+  
+
+##### Fraud detection and data analysis
+
+As validation is at the core of blockchain technology’s decentralised repository, we provide an immutable historical record which can independently verify customers, policies and transactions for authenticity. Since blockchain increases transparency, data becomes immutable and reliable witihin our framework. 
+
+Data stores will also be accessible in a more secure way, opening the doors for real-time statistics and analyses to improve operations and further cut costs. The more reliable the data, the less room for mistakes which means insurance companies can better meet the ever-evolving needs of policyholders.
 
 
 
+### 												Why Permissioned Blockchain (and other issues) ?
 
+Public blockchains, where all parties have access to every transaction on the ledger, may not be feasible for the insurance industry due to *privacy and security concerns* and that private, whereas permissioned blockchains are certainly more favoured. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+The issue of regulation to protect consumers from abuse and insurance companies from taking on too much risk are also a concern. Thus, legal and regulatory frameworks for insurance need to evolve and provide clear guidance for blockchain technology to see wide adoption.
 
 # References
 
 -  https://www.nortonrosefulbright.com/en/knowledge/publications/88244592/the-future-of-smart-contracts-in-insurance
-
-- https://b3i.tech/
-
-  
-
+-  https://b3i.tech/
+-  https://0-orbis-bvdinfo-com
+-  https://www.lemonade.com/de/en
+-  https://www.allianz.com/en/investor_relations/results-reports/annual-reports.html
+-  https://www.jp-life.japanpost.jp/english/aboutus/financial/en_abt_fnc_ar.html
+-  https://www.axa.com/en/newsroom/publications/2018-annual-report
 - https://www.technavio.com/report/global-insurtech-market-industry-analysis
 
