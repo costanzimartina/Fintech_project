@@ -90,12 +90,6 @@ o  No matter how much the insurance pays out, the bottom line stays the same
 
 
 
-## **Potential Competitors**
-
-
-
-**Acko General Insurance** 
-
 
 
 

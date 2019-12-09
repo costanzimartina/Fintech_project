@@ -61,12 +61,36 @@ Assess Proposal and what has been done
 
 
 
-## **Industry Analysis & Discussion**
+## **The Economics behind it**
 
--Competitors in the Car insurance mkt (insurance vs insurtech)
--Market analysis and barriers to entry
--The economics behind our idea: where do we generate value, who should endorse it (police, already existing insurance companies? close the gap for missing info -> More efficient)
--Outlook: How to improve the idea and where do we go from here? Sensors, make it fully decentralised? 
+!!!! {Here am going to talk about the benefits in monetary terms of our idea: what 
+      issues of normal insurance could be made more efficient with our idea, why should
+      they adopt it, how it normally works and where ours - here a couple of graphs in 
+      the slides would be good - make it work better, potential costs saved}  !!!!
+
++ Bit of competition mkt analysis Competitors in the Car insurance mkt (insurance vs insurtech):
+  - Why our idea is better than normal insurance (mentioned above already though)
+  - Why is it better than online insurance (that already saves costs)?			                	Genialloyd,Quixa, Zurich Assicurazioni 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
