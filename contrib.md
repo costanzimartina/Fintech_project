@@ -1,5 +1,7 @@
 # Contributions
 
+12/09 - Car insurance premium rate determination file - Paula
+
 12/07 - Review and coordianation of report and coding parts - Martina
 
 12/02 - Contributions file - Paula
