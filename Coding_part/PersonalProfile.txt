@@ -1,0 +1,78 @@
+pragma solidity ^0.5.1;
+
+contract PersonalProfile {
+    
+    string public name;
+    string public surname;
+    string public birth;
+    string public licenseID;
+    
+    struct AccidentsHistory {
+        string vehicleOwner;
+        string vehicleOther;
+        uint256 damages;
+        string description;
+        uint256 time;
+    }
+    
+    mapping(uint256 => AccidentsHistory) accidents;
+    uint256[] public AccidentsArray;
+    
+    function addName(string memory _name)
+        public
+        {
+            name = _name;
+        }
+        
+    function addSurname(string memory _surname)
+        public
+        {
+            surname = _surname;
+        }
+        
+    function addBirth(string memory _birth)
+        public
+        {
+            birth = _birth;
+        }
+        
+    function addLicenseID(string memory _id)
+        public
+        {
+            licenseID = _id;
+        }
+    
+    function howManyAccidents() public view returns(uint256) {
+        return AccidentsArray.length;
+  }
+    
+    function UpdateHistory (
+                            string memory _vehicleOwner, 
+                            string memory _vehicleOther, 
+                            uint256 _damages, 
+                            string memory _description) 
+        public 
+        {
+        AccidentsHistory storage history = accidents[howManyAccidents()];
+        history.vehicleOwner = _vehicleOwner;
+        history.vehicleOther = _vehicleOther;
+        history.damages = _damages;
+        history.description = _description;
+        history.time = block.timestamp;
+        AccidentsArray.push(howManyAccidents()) -1;
+        }
+    
+        
+    function getAccident(uint256 _counter) view public returns (string memory, string memory, uint256, string memory, uint256) {
+        return (
+        accidents[_counter].vehicleOwner, 
+        accidents[_counter].vehicleOther, 
+        accidents[_counter].damages, 
+        accidents[_counter].description, 
+        accidents[_counter].time
+        );
+    }
+    
+    }
+    
+    

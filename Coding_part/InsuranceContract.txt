@@ -6,8 +6,7 @@ contract PersonalInsurance {
     string public personSurname;
     //string[] public drivers;
     string public licenseID;
-    string public licensePlate; /// qui vanno aggiunti come external data feed
-//tutti i dati che saranno nel contratto ‘personal’ e che essenzialmente servono a calcolare il premio assicurativo
+    string public licensePlate;
     uint256 public registrationYear;
     string public vechicleType;
     uint256 public vehicleValue;
@@ -102,12 +101,4 @@ contract PersonalInsurance {
         {
             licenseID = id;
         }
-        
-    
 }
-
-//questo contratto va terminato, nel senso che dobbiamo inserire:
-- avviene l’incidente,
-- la colpa non è mia?
-- l’assicurazione mi rimborsa—>manca l’atto del rimborso
-(- saranno poi cavoli dell’assicurazione richiedere i soldi all’altra assicurazione) 
