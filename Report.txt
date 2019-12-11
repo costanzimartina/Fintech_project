@@ -55,7 +55,11 @@ The implementation of the smart contracts was performed on Remix using Solidity 
 ###### PERSONAL CONTRACT
 
 The personal_contract is created when a person obtains the license. It contains the most relevant information regarding the individual such as:
-…………………………………
+
+- Name
+- Surname
+- Birth date
+- License ID
 
 It has two main functions:
 
@@ -66,14 +70,30 @@ It has two main functions:
 Essentially, the *'personal_contract'* is a sort of ‘incorruptible’ identification card that can be only updated by an official source/node, which is the police (through the police reports). It is useful because the *'insurace_contract’* is based on the information that the *'personal_contract'* contains, both regarding the computation of the risk premium and the  the resolution of an accident practice.
 ——————  codice—————
 
+```
+
+```
+
+
+
 ###### POLICE REPORT
 
-The *'police_report'* is created by the police and it contains all the information about a car accident: 
-………………………………………...
+The *'police_report'* is created by the police and it contains all the information about a car accident:
+
+- First vehicle involved
+- Second vehicle involved
+- Fault ownership
+- Description of the incident
+- Damage level
+- Time at which the report was completed
 
 Since it is drafted by the police, it is an ‘official source’ and its main function is to update the *‘personal_contract’* and to provide all the information necessary for the insurance to assess whether the insured person is entitled to a refund. We decided not to link the *'police_report'* to the *'insurance_contract'*, but to let them communicate indirectly through the *‘personal contract’*, as you can see from the graph.
 
 ————codice———
+
+```
+
+```
 
 
 
@@ -82,6 +102,10 @@ Since it is drafted by the police, it is an ‘official source’ and its main f
 The *'insurance_contract'* is the contract stipulated by the insurance to the insured. Its main function is just to evaluate if the fault lies with the insured person or not. If the accident isn't the insured's fault, the insurance can provide automatically the refund to the insured. This contract has an external data feed from the *'personal_contract'*, such that when a new accident happens the contract receives new information about it, evaluates it and then decides whether it's correct or not to provide the reimbursement. 
 
 ————codice———— 
+
+```
+
+```
 
 
 
