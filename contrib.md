@@ -1,15 +1,17 @@
 # Contributions
+12/11 - Report file update - Paula, Martina
+
 12/11 - Starting the ppt presentation - Sharlin, Paula, Mirco, Martina, Vittorio
 
-12/11 - coding part, second and third smart contract- Martina Vittorio
+12/11 - Coding part, second and third smart contract- Martina, Vittorio
 
-12/09 - Office hour - Martina Vittorio
+12/09 - Office hour - Martina, Vittorio
 
 12/09 - Administrative costs in insurance companies - Mirco
 
 12/09 - Car insurance premium rate determination file - Paula
 
-12/07 - Review and coordianation of report and coding parts - Martina
+12/07 - Review and coordination of report and coding parts - Martina
 
 12/02 - Contributions file - Paula
 
