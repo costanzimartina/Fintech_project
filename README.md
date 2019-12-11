@@ -27,30 +27,27 @@ Vittorio and I (Martina) will focus more on the coding part and Sharlyn,Mirko an
 ### I sent an e-mail to Benedetta to inform her about our progress 2/12/2019
 
 ### First smart contract 2/12/2019 
-The code inside Insurance.txt is the first raw version of the Police Report. The contract contains information such as:
-  - first vehicle
-  - second vehicle
-  - who's fault is
-  - damage amount
-  - the owner of the contract (aka the police)
-  - the time in which the contract was deployed
-  
-Only the Police can modify the existing contract, I have done it via the modfifier OnlyOwner. In fact, if you deploy the contract 
-using one account, and then switch to another and try to modify values stored inside it, it will raise an error.
+The code inside Insurance.txt is the first raw version of the Police Report. 
+
+### How a car insurance works 4/12/2019
+Creation of a txt file that explain this
 
 ### Second smart contract 5/12/2019 
-
+The code is a contract between a person and the insurance company
 
 ### Some updates 8/12/2019
 We discussed about what is going on, everyone is working on his or her part. Everyone have uploaded what they have written until now, and we still working on the coding part. I have booked an office hour with the professor on Monday to disccuss about the coding part. 
 
+### Car insurance premium rate determination 9/12/2019
 
 ### Office hour with professor 9/12/2019
 We discussed about the coding part.
 
 ### Third smart contract 10/12/2019
+Personal contract with all the information about a person
 
 ### Meeting - coding part 11/12/2019
+We tried to make the contracts communicate
 
 ### I sent an e-mail to Benedetta to inform her about our progress 11/12/2019
 

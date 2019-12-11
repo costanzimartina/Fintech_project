@@ -17,6 +17,6 @@
 
 12/02 - Research about insuretech - Sharlin, Mirco  
 
-11/30 - Insurance.txt - Vittorio
+11/30 - First smart contract - Vittorio
 
-11/30 - README.md - Vittorio, Martina
+11/30 - README.md - Martina
