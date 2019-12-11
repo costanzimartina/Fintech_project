@@ -1,9 +1,7 @@
 # Fintech_project
 Progress about project
 
-
 ### We met the first time all the team on 25/11/2019
-
 We discuss about the project and we decide the main idea of our project.
 We sketch it on a paper that it is also available under the name of firs_sketch
 in the folder Projectprogress. Every one also upload every information in the repository 
@@ -40,12 +38,21 @@ The code inside Insurance.txt is the first raw version of the Police Report. The
 Only the Police can modify the existing contract, I have done it via the modfifier OnlyOwner. In fact, if you deploy the contract 
 using one account, and then switch to another and try to modify values stored inside it, it will raise an error.
 
-### Second smart contract
-
+### Second smart contract 5/12/2019 
 
 
 ### Some updates 8/12/2019
-We discuss about what is going on, everyone is working on his or her part. Everyone have uploaded what they have written until now, and we still working on the coding part. I have booked an office hour with the professor on Monday to disccuss about the coding part. 
+We discussed about what is going on, everyone is working on his or her part. Everyone have uploaded what they have written until now, and we still working on the coding part. I have booked an office hour with the professor on Monday to disccuss about the coding part. 
+
+
+### Office hour with professor 9/12/2019
+We discussed about the coding part.
+
+### Third smart contract 10/12/2019
+
+### Meeting - coding part 11/12/2019
+
+### I sent an e-mail to Benedetta to inform her about our progress 11/12/2019
 
 
 

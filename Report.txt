@@ -8,20 +8,15 @@ The current insurance market presents many negative and controversial aspects th
 Just to provide you with some data, despite the fact that a car insurance can be very expensive the chances of getting paid out by an insurance are at 5% and it is not even clear how much is covered, moreover just 60%-70% of premia are spent on damages, the 20% is spent on sales an the remaining percentage on the other kind of costs and finally the procedures take a very long time. 
 From the other side, in defence of insurance companies, the system allows - very often - opportunities to play the system and exploit betterment. Therefore a solution that leverages transparency and the safeness is needed and it can improve both the customer experience, reducing the costs and and making the refunding procedure faster and more efficient, and the internal operations of insurance companies, that can reduce costs related to frauds that according to the FBI - the total damages of insurance fraud - exceed $40 billion per year (considering all type of insurances) and they can also streamline the procedure reducing the operating costs. 
 
-Due to recent technological development, the insurance market falls under the radar for a technological advancement. A recent report about the Global InsurTech market revealed that the market is expected to grow by $15.63 Billion from 2018 to 2023, considering that nowadays more then the 50% of the population does not have any kind of insurance. This translates to an estimated year-over-year growth of more than 45% for 2019. * $^3$ The apparent issues make room for InsurTech startups that attempt to disrupt the market with digitalized systems. 
+Due to recent technological development, the insurance market falls under the radar for a technological advancement. A recent report about the Global InsurTech market revealed that the market is expected to grow by $15.63 Billion from 2018 to 2023. This translates to an estimated year-over-year growth of more than 45% for 2019. * $^3$ The apparent issues make room for InsurTech startups that attempt to disrupt the market with digitalized systems. 
 
-A seemingly suitable solution for the mentioned issues of the insurance market are blockchain based technologies. Due to their immutability and transparancy, blockchain based databases should reduce administration costs and due to their immutability also the risk of fraud. Additionally, the implementation of smart contracts allows for an automated way of payment. Considering that in the traditional insurance system, payment for claims take weeks or even months, an instant, automated transaction would be a big advancement. Considering the high initial investment cost to implement such a system, the first implementation of smart contracts are likely to be seen in markets with large short-tail risks, such as catastrophe or property risks, the  before advancing to long-tail risks and retail markets.*
+A seemingly suitable solution for the mentioned issues of the insurance market are blockchain based technologies. Due to their immutability and transparancy, blockchain based databases should reduce administration costs and due to their immutability also the risk of fraud. Additionally, the implementation of smart contracts allows for an automated way of payment. Considering that in the traditional insurance system, payment for claims take weeks or even months, an instant, automated transaction would be a big advancement. Considering the high initial investment cost to implement such a system.
 
 One of the first implementations in the insurance sector are going to market in the beginning of 2020. Owned by a cooperation of 18 insurance market participants around the globe, *B3i* is building a platform on distributed ledger technology to  create a "single source of truth" opposing to decentralized and obscure data systems. The ambition is to be able to optimise the  processes in the market  and reduce the costs significantly. 
 
 B3i's concept is that every node processes and verifies each activity. In this way, there exisits a common consensus about the validity of a transaction. Furthermore, every entry on the ledger are immutable to ensure transparency and trust. Through smart contracting asset transfers are automatically validated and enforced, while they ensure that only the nodes involved in the transaction can access the information. 
 
-A blockchain-based approach is very innovative in the insurance market and finds its first application with B3i on the reinsurance market. '``Ending depends on how 2nd part continues``
-
-This project aims to adress some of the issues linked to the insureance market by implementing a blockchain based smart contracting in the field of car insurances. 
-
 - **Problems with the current market** 
-
 - **What is going on in the Industry of Insurances /InsurTech** 
 - **Maybe prospects as well ###NOT TOO LONG because you have the same point at the end**
 - **b3i ## SAME**
@@ -29,16 +24,17 @@ This project aims to adress some of the issues linked to the insureance market b
 ## Project
 
 #### Project Goals
+This project aims to address some of the main issues - above mentioned -  linked to the field of car insurances by implementing a blockchain based smart contracting on Ethereum. 
 
-The purpose of our project is to propose a solution that aims to solve different problems in the procedure that start from the creation of a car insurance contract to the expiration of the contract itself, passing through the management of a car accident and all the related practices. The major goal and the focus is on making the procedure more efficient and safe in order to reduce the operating costs an the costs related to frauds.
+The purpose of this project is to solve different problems in the procedure that start from the creation of a car insurance contract to the expiration of the contract itself, passing through the management of a car accident and all the related practices. The major goal and the focus is on making the procedure more efficient and safe in order to reduce the operating costs and the costs related to frauds. Indeed Blockchain-based networks can secure customer data, automate payments through smart contracts, and therefore enhance productivity, customer experience and prevent frauds.
 
-#### Main Idea
-
-The adoption of modern technologies such as blockchain in insurance can address the different inefficiencies that are involved in the business. Blockchain-based networks can secure customer data and automate payments through smart contracts, and therefore enhance productivity and customer experience and prevent frauds.
-
-This is why we propose in this project the automation of the auto insurance process by the use of a descentralized Blockchain system, where people in the network support each other’s risk, instead of the whole process being ran by the insurer (third party). In this way, our private/permissioned Blockchain would permit us to automate claims processing using smart contracts with specific business rules that are detailed later on. 
 
 #### Process Flow 
+The main idea is that we have three main smart contracts. The first one is the ‘police_report’ that contains all the details of a car accident, Its main function is to update the ‘personal_contract’ that is a contract containing all the information about the owner of a car insurance and about his history as a driver. The latter one is linked to the ‘insurance_contract’ and provide the information when an accident happens and the information about the owner- useful to compute the risk premium. The ‘insurance_contract’ is the contract between the driver and the insurance company, once it receive the information about the accident it processes all the information in the police reports and evaluate if it is possibile to provide a compensation or not. 
+
+
+
+###valutare se collegare il report alla assicurazione oppure il contratto personale alla assicurazione
 
 Explanation of the process flow and implications (tasks of the nodes, authentication etc.)
 
