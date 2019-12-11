@@ -35,11 +35,30 @@ We implemented the smart contracts on Remix using Solidity version 0.5.1.
 Deeper explanation of the smart contracts and of the flow.
 
 —PERSONAL CONTRACT—
-The personal_contract is a contract 
+The personal_contract is created when a person gets the licence. It contain all the most important information regarding the individual such as:
+…………………………………
+It has two main functions:
+1. Having all the information about the person, including also his past history it is a useful tool for insurance companies to calculate the risk premium. Furthermore since it is based on a blockchain system it is incorruptible, thus the person can’t lie about his previous ‘incident history’ since all the essential information to compute the risk premium and to stipulate a new contract are blocked in the blockchain. (prevent frauds)
 
-####Solving the contract 
+2. When an accident happens, the police draw up a report with all the information regarding the accident (see below), this report is ‘pushed’ and it updates the personal_contract, which in turn give an external data feed to the insurance_contract. The latter when receives the informations about the accident starts to process the data. 
 
-#### Code Overview
+Essentially the personal contract is a sort of ‘incorruptible’ identification card that can be only updated by an official source/node - that is the police (through the police reports). It is useful because the ‘insurace_contract’ is based on the information that the personal_contract contains, both regarding the computation of the risk premium and the  the resolution of an accident practice.
+——————  codice—————
+
+
+——POLICE REPORT—— 
+The police report is created by the police an it contains all the information about a car accident: 
+………………………………………...
+Since it is drafted by the police, it is an ‘official source’ and its main function is to update the ‘personal_contract’ and to provide all the information necessary for the insurance to assess whether the insured person is entitled to a refund. We decided to not linked the Police_report to the insurance_contract, but to let them communicate indirectly through the ‘personal contract’, as you can see from the graph.
+
+————codice———
+
+
+——INSURANCE CONTRACT ——
+The insurance_contract is the contract stipulated by the insurance to the insured. It’s main function is just to evaluate if the fault lies with the insured person or not. If not the insurance can provide automatically the refund to the insured. This contract has an external data feed from the personal_contract, in this way when a new accident happens the contract receives new information (about the accident), it evaluates such information and then it decides wether is correct or not to provide the reimbursement. 
+
+
+————codice———— 
 
 Explain the code in the smart contract 
 
