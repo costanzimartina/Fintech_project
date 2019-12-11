@@ -71,3 +71,5 @@ contract PoliceReport {
 
 //creare un contratto privato, che ogni utente deve creare appena presa la patente
 //però solo nodi esterni possono convalidare i dati.
+
+abbiamo un address del contratto 
