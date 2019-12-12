@@ -99,7 +99,7 @@ What determines the fluctuations in the value of premium of an individual's insu
 
   ### 														
 
-  ### 														Advantages of BT (and our idea)
+  ### 													Advantages of BT (and our idea)
 
 
 
@@ -107,7 +107,7 @@ What determines the fluctuations in the value of premium of an individual's insu
 
 Insured individuals typically find insurance contracts long and confusing while the insurance companies are battling an extraordinary amount of fraud. Through blockchain and smart contracts, both parties would benefit from managing claims in a responsive and transparent way. 
 
-​																					SMART CONTRACTS
+​												SMART CONTRACTS
 
 * Customizable --> Custom smart contract code can accommodate the parameters of a policy and execute action automatically through trustless identity verification;
 
@@ -117,7 +117,7 @@ Insured individuals typically find insurance contracts long and confusing while 
 
   ​																			
 
-  ​																			 Why so important?
+  ​											Why so important?
 
 Claims processing and management is one of the key business area for the insurance industry and the ability to promptly pay claim timely increases the reputation and trust by customers in purchasing insurance cover from such company. All claims processing undergoes three main process namely: 
 
