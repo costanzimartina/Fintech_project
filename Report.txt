@@ -107,6 +107,11 @@ The *'insurance_contract'* is the contract stipulated by the insurance to the in
 
 ```
 
+Just some notes
+#further steps: the personal contract should send some money (risk premium) in order to create the insurance contract. then the insurance contract can use that money to process the data. it has also to verify if the police report is valid and then it can provide the refund
+
+the police report should emit en event that will be available on the blockchain.
+Outside of ethreum blockchain there is a an application that check if an event happens (it is a sort of a loop) if the event occurs it notify it to the person that has to send the message to the insurance that should provide the verification of the report and eventually provide a refund. This is because it does not makes sense that the police pays for the notify it to the insurer. 
 
 
 #### Proposal Assessment

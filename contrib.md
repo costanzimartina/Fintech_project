@@ -1,4 +1,7 @@
+
 # Contributions
+12/12 - Coding part third smart contract - Vittorio Martina 
+
 12/11 - Report file update - Paula, Martina
 
 12/11 - Starting the ppt presentation - Sharlin, Paula, Mirco, Martina, Vittorio
