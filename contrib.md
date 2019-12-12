@@ -7,7 +7,7 @@
 
 12/09 - Office hour - Martina, Vittorio
 
-12/09 - Administrative costs in insurance companies - Mirco
+12/09 - Cost analysis of insurance companies' business model - Mirco
 
 12/09 - Car insurance premium rate determination file - Paula
 
