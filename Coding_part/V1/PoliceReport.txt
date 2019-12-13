@@ -1,0 +1,77 @@
+pragma solidity ^0.5.1;
+
+contract PoliceReport {
+    
+    string public firstVehicle;
+    string public secondVehicle;
+    string public fault;
+    string public description;
+    uint256 public damage;
+    uint256 public time = block.timestamp;
+    address owner;
+    
+    // here only the owner (the police) can deploy the contract
+    modifier OnlyOwner() 
+        {
+        require(msg.sender == owner);
+        _;
+        }
+    // setting the owner
+    constructor() 
+    public 
+        {
+            owner = msg.sender;
+        }
+    // only the owner can add info to the report
+    function addVehicles(
+        string memory _firstVehicle,
+        string memory _secondVehicle
+        )
+    public
+    OnlyOwner
+    {
+        firstVehicle = _firstVehicle;
+        secondVehicle = _secondVehicle;
+    }
+    
+    function addDamage(
+        uint256 _damage
+        )
+    public
+    OnlyOwner
+    {
+        damage = _damage;
+    }
+    
+    function addFault(
+        string memory _fault
+        )
+    public
+    OnlyOwner
+    {
+        fault = _fault; 
+    }
+    
+    function addDescription(
+        string memory descr
+        )
+    public 
+    OnlyOwner
+    {
+        description = descr;
+    }
+        
+}
+
+<<<<<<< HEAD:Coding_part/Insurance.txt
+// Come leggere ed aggiornare dati =external data feed
+// la struttura da utilizzare per il report personale (dictionary)
+// Come si fa in solidity a specificare quali sono i nodi autorizzati 
+//
+
+//creare un contratto privato, che ogni utente deve creare appena presa la patente
+//però solo nodi esterni possono convalidare i dati.
+
+abbiamo un address del contratto 
+=======
+>>>>>>> 2b27d43d923d292c5c05d5661bae57c00323bec0:Coding_part/PoliceReport.txt
