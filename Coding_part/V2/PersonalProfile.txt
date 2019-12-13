@@ -1,0 +1,150 @@
+pragma solidity ^0.5.1;
+
+import "./Insurer.sol";
+
+contract PersonalProfile {
+    
+    address owner = msg.sender;
+    uint payment;
+    
+    struct PersonalInfo
+        {
+    //    address public person;
+        string name;
+        string surname;
+        string birth;
+        string licenseID;
+        string vehicle;
+        }
+    
+    // modifier to allow only the owner to update personal info
+    modifier OnlyOwner()
+        {
+            require(msg.sender == owner);
+            _;
+        }
+    
+    mapping(address => PersonalInfo) information;
+        address public my_account;
+    
+    // personal info can be updated only by the owner of the profile!
+    function updatePersonalInfo(string memory _name,
+                                string memory _surname,
+                                string memory _birth,
+                                string memory _licenseID,
+                                string memory _vehicle)
+    public 
+        OnlyOwner
+        {
+        PersonalInfo storage info = information[owner];
+        
+        info.name = _name;
+        info.surname = _surname;
+        info.birth = _birth;
+        info.licenseID = _licenseID;
+        info.vehicle = _vehicle;
+        my_account = owner;
+        }
+    
+    // function to view my personal information
+    function viewPersonalInfo() public view 
+    returns(address, string memory, string memory, string memory, string memory, string memory) 
+        {
+        
+        return (owner,
+                information[owner].name, 
+                information[owner].surname,
+                information[owner].birth,
+                information[owner].licenseID,
+                information[owner].vehicle
+                );
+        }
+        
+    function pushToInsurer(address payable _insuranceAddress)
+    public 
+        {
+            Insurer insurance = Insurer(_insuranceAddress);
+        
+            insurance.addInsured(
+                                owner, 
+                                information[owner].name, 
+                                information[owner].surname,
+                                information[owner].birth,
+                                information[owner].licenseID,
+                                information[owner].vehicle
+                                );
+        }
+        
+    function payAndgetInsurance(address payable _insuranceAddress) public payable {
+        // TOGLIERE COMMENTI
+        Insurer receiver = Insurer(_insuranceAddress);
+        payment = msg.value;
+        if(payment == 5*10**18) {
+            _insuranceAddress.transfer(payment);
+            receiver.activateInsurance(owner);
+           }
+        else {
+            revert();
+            }
+        }
+    
+    // this modifier allows only the police to push information about accidents record
+    modifier OnlyPolice()
+        {
+            require(msg.sender != owner);
+            _;
+        }
+    
+    struct AccidentsHistory 
+        {
+        string vehicleOwner;
+        string vehicleOther;
+        string fault;
+        string description;
+        uint256 damages;
+        uint256 time;
+        }
+    
+    mapping(uint256 => AccidentsHistory) accidents;
+        uint256[] public AccidentsArray;
+        
+    function howManyAccidents() public view returns(uint256) 
+        {
+        return AccidentsArray.length;
+        }
+    
+    function UpdateHistory(
+                           string memory _vehicleOwner, 
+                           string memory _vehicleOther, 
+                           string memory _fault,
+                           string memory _description,
+                           uint256 _damages, 
+                           uint256 _time) 
+        public
+        OnlyPolice
+        {
+        AccidentsHistory storage history = accidents[howManyAccidents()];
+        history.vehicleOwner = _vehicleOwner;
+        history.vehicleOther = _vehicleOther;
+        history.fault = _fault;
+        history.description = _description;
+        history.damages = _damages;
+        history.time = _time;
+        AccidentsArray.push(howManyAccidents()) -1;
+        }
+    
+    function getAccident(uint256 _counter) 
+        view public 
+        returns(string memory, string memory, string memory, string memory, uint256, uint256) 
+        {
+        return (
+        accidents[_counter].vehicleOwner, 
+        accidents[_counter].vehicleOther, 
+        accidents[_counter].fault,
+        accidents[_counter].description, 
+        accidents[_counter].damages, 
+        accidents[_counter].time
+        );
+    }
+    
+    }

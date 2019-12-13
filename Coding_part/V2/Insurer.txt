@@ -1,0 +1,67 @@
+pragma solidity ^ 0.5.1;
+
+contract Insurer {
+    
+    address owner; //the address of the insurer
+    
+    // setting the owner
+    constructor() 
+    public 
+        {
+            owner = msg.sender;
+        }
+        
+    function Balance() public view returns(uint) {
+        return address(this).balance;
+    }
+    
+    function() external payable {}
+    
+    struct Insured {
+     //   address person
+        string name;
+        string surname;
+        string birth;
+        string licenseID;
+        string vehicle;
+        bool has_payed;
+    }
+    
+    mapping(address => Insured) all_insured_info;
+    address[] public insured_accounts_array;
+    
+    function addInsured(
+                        address _person, string memory _name, string memory _surname, 
+                        string memory _birth, string memory _licenseID, string memory _vehicle)
+        public {
+            Insured storage i = all_insured_info[_person];
+            i.name = _name;
+            i.surname = _surname;
+            i.birth = _birth;
+            i.licenseID = _licenseID;
+            i.vehicle = _vehicle;
+            insured_accounts_array.push(_person) -1;
+            }
+            
+    function viewInsured(address _person) public view 
+        returns(string memory, string memory, string memory, string memory, string memory, bool)
+        {
+        return (all_insured_info[_person].name,
+                all_insured_info[_person].surname,
+                all_insured_info[_person].birth,
+                all_insured_info[_person].licenseID,
+                all_insured_info[_person].vehicle,
+                all_insured_info[_person].has_payed
+                );
+        }
+        
+    function activateInsurance(address _person)
+    public
+    {
+        Insured storage i = all_insured_info[_person];
+        i.has_payed = true;
+    }
+        
+    
+    
+}
