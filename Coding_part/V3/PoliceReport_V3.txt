@@ -1,0 +1,100 @@
+pragma solidity ^0.5.1;
+
+import "./PersonalProfile.sol";
+
+contract PoliceReport {
+    
+    address owner; // that's the police
+    
+    struct Report {
+        
+        string firstVehicle;
+        string secondVehicle;
+        string fault;
+        string description;
+        uint256 damage;
+        uint256 time;
+        
+        }
+    
+    mapping(uint256 => Report) report;
+        uint256[] public reportsArray;
+    
+    // here only the owner (the police) can deploy the contract
+    modifier OnlyOwner() 
+        {
+        require(msg.sender == owner);
+        _;
+        }
+    // setting the owner
+    constructor() 
+    public 
+        {
+            owner = msg.sender;
+        }
+ 
+    function howManyReports() public view returns(uint256) 
+    {
+        return reportsArray.length;
+    } 
+ 
+    function updateReport(
+                         address payable _address_to_push,
+                         string memory _firstVehicle, 
+                         string memory _secondVehicle,
+                         string memory _fault,
+                         string memory _description,
+                         uint256 _damage
+                         )
+        public 
+        OnlyOwner
+        {
+            uint256 my_index = howManyReports();
+            Report storage r = report[my_index];
+            r.firstVehicle = _firstVehicle;
+            r.secondVehicle = _secondVehicle;
+            r.fault = _fault;
+            r.description = _description;
+            r.damage = _damage;
+            r.time = block.timestamp;
+            reportsArray.push(my_index) -1;
+            
+            pushToPersonalProfile(_address_to_push, my_index);
+        }
+    
+    function viewReport(uint256 _index) 
+        public view 
+        returns(string memory, 
+                string memory, 
+                string memory, 
+                string memory, 
+                uint256,
+                uint256) 
+            {
+        return (
+            report[_index].firstVehicle, 
+            report[_index].secondVehicle, 
+            report[_index].fault,
+            report[_index].description,
+            report[_index].damage,
+            report[_index].time
+            );
+        }
+        
+    function pushToPersonalProfile(address payable _PersonAddress, uint256 _index) 
+    public 
+        {
+            PersonalProfile profile = PersonalProfile(_PersonAddress);
+        
+            profile.UpdateHistory(
+                                report[_index].firstVehicle, 
+                                report[_index].secondVehicle, 
+                                report[_index].fault,
+                                report[_index].description,
+                                report[_index].damage,
+                                report[_index].time
+                                );
+                
+    }
+        
+}
