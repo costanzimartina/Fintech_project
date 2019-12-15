@@ -1,5 +1,9 @@
 
 # Contributions
+12/15 - Readme_simulation - Martina
+
+12/14 - version 3 CODE - Vittorio
+
 12/12 - Powerpoint presentation file - Paula
 
 12/12 - Coding part third smart contract - Vittorio, Martina 
