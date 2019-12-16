@@ -14,7 +14,7 @@ Note that every Smart Contract should be deployed using a different account, sin
 
 
 
-### Assumptions:**
+### Assumptions:
 
 1. <u>Individuals’ homogeneity:</u> all individuals belong to the same risk class, pay the same price to the insurer and have the same maximum damage coverage. In our simulation, we fix the individual premium to 5     ethers and the maximum coverage to 8 ethers.
 2. <u>There is only one insurer in the market:</u> the two individuals are covered by the same entity.
@@ -24,7 +24,7 @@ Note that every Smart Contract should be deployed using a different account, sin
 
 
 
-### Additional Considerations**:
+### Additional Considerations
 
 - Both individuals pay a minimal amount of ether and gas as transaction fees when they pay the insurance premium or when they request a refund.
 - In case of accident, under the assumption of *binary fault*, the faulty person will have to pay his     damages on his own. Only the damages of the person without fault are displayed inside the Police Report, and only them are covered in the reimbursement procedure. 
@@ -32,7 +32,7 @@ Note that every Smart Contract should be deployed using a different account, sin
 
 
 
-### Procedure**
+### Procedure
 
 ##### In a very logical way we start with the deployment of the insurance company through the InsurerContract:
 
@@ -54,7 +54,7 @@ Note that every Smart Contract should be deployed using a different account, sin
 - If you click on *howManyAccidents* you can see that now we have 0 accidents. 
 - Now copy the InsurerContract address from the symbol (the one circled in red)    
 
-<img src="file:///C:/Users/BASIGALUP/Documents/MiMA/XCH/Courses/Finance with big data/Group Project/InsurerContract.png" alt="img" style="zoom:40%;" />
+<img src="file:///C:/Users/BASIGALUP/Documents/GitHub/Fintech_project/src/InsurerContract.png" alt="img" style="zoom:40%;" />
 
 - Paste it in the function *payAndgetInsurance*, select a value of 5 ethers and click on transact, in this way the Person_1 provides all his personal information to the insurance company (be sure that the account is the one that you used to deploy the PersonalContract) and pays the risk premium.
 - Go to the InsurerContract, in *recorded_accounts_array select 0 (the index of the first person who passed his own information), as you can see now there is one address that is the account of Person_1. Paste this address in the *viewInsured* function and as you can see now you have all the information about Person_1, pay attention at the line 5 where you have *bool: true*, it means that the person has paid the risk premium and he is insured.
@@ -115,7 +115,7 @@ The police pays a little amount of ether in order to update the history of both 
 
 - Click on *howManyAccident*, as you can see now it returns 1, and if in the function *getAccident* you write 0 (the index of the first accident) the function returns all the information about the first car accident.
 
-- In the function *getRefund* copy paste from <img src="file:///C:/Users/BASIGALUP/Documents/MiMA/XCH/Courses/Finance with big data/Group Project/CopyPaste.png" alt="img" style="zoom:60%;" /> both the address of the InsurerContract and Person_2 PersonalProfile address, in the index field select the index of the accident for which you want to request a refund, in this case is 0, then click on transact. 
+- In the function *getRefund* copy paste from <img src="file:///C:/Users/BASIGALUP/Documents/GitHub/Fintech_project/src/CopyPaste.png" alt="img" style="zoom:60%;" /> both the address of the InsurerContract and Person_2 PersonalProfile address, in the index field select the index of the accident for which you want to request a refund, in this case is 0, then click on transact. 
 
 - Now click on *MyBalance*, as you can see now it amounts at 2 Ether! That is the amount of the damage written in the PoliceReport. 
 
