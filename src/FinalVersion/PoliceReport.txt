@@ -1,0 +1,117 @@
+pragma solidity ^0.5.1;
+
+import "./PersonalProfile.sol";
+
+contract PoliceReport {
+    
+    address owner; // that's the police's address
+    
+    // struct of the police report
+    struct Report {
+        
+        string firstVehicle;
+        string secondVehicle;
+        string fault; // fault here must be the license ID of the faulty person.
+        string description;
+        uint256 damage;
+        uint256 time;
+        
+        }
+    // mapping to the struct Report: {index: {Report}}
+    mapping(uint256 => Report) report;
+        uint256[] public reportsArray;
+    
+    // here only the owner (the police) can deploy the contract
+    modifier OnlyOwner() 
+        {
+        require(msg.sender == owner);
+        _;
+        }
+    // setting the owner
+    constructor() 
+    public 
+        {
+            owner = msg.sender;
+        }
+ 
+    function howManyReports() public view returns(uint256) // returns the length of the array storing all reports
+    {
+        return reportsArray.length;
+    } 
+ 
+    // function that allows the Police to insert values in the mapping-struct variables and push it to the 2 accounts of the people involved
+    function createReport(
+                         address payable _address1, // addres of person 1
+                         address payable _address2, // address of person 2
+                         string memory _firstVehicle, 
+                         string memory _secondVehicle,
+                         string memory _fault,
+                         string memory _description,
+                         uint256 _damage
+                         )
+        public 
+        OnlyOwner // only the Police can send this
+        {
+            uint256 my_index = howManyReports();
+            Report storage r = report[my_index];
+            r.firstVehicle = _firstVehicle;
+            r.secondVehicle = _secondVehicle;
+            r.fault = _fault;
+            r.description = _description;
+            r.damage = _damage;
+            r.time = block.timestamp;
+            reportsArray.push(my_index) -1;
+            
+            pushToPersonalProfile(_address1, _address2, my_index); // here there's the push to 2 personal profiles (the function is below)
+        }
+    
+    // function that just shows a report, which is accessible using an index 
+    function viewReport(uint256 _index) 
+        public view 
+        returns(string memory, 
+                string memory, 
+                string memory, 
+                string memory, 
+                uint256,
+                uint256) 
+            {
+        return (
+            report[_index].firstVehicle, 
+            report[_index].secondVehicle, 
+            report[_index].fault,
+            report[_index].description,
+            report[_index].damage,
+            report[_index].time
+            );
+        }
+        
+    // here's the function that shares the info of one police report with the 2 people
+    function pushToPersonalProfile(address payable _address1, address payable _address2, uint256 _index) 
+    public 
+        {
+            // I call here the 2 contracts and store them into 2 local variables profile1 and profile2
+            PersonalProfile profile1 = PersonalProfile(_address1);
+            PersonalProfile profile2 = PersonalProfile(_address2);
+             
+            // both profiles contain the function "UpdateHistory", to insert data from police report. I call the function for both profiles. Remember only the police (in reality not the owner) can call this
+            profile1.UpdateHistory(
+                                report[_index].firstVehicle, 
+                                report[_index].secondVehicle, 
+                                report[_index].fault,
+                                report[_index].description,
+                                report[_index].damage,
+                                report[_index].time
+                                );
+                                
+            profile2.UpdateHistory(
+                                report[_index].firstVehicle, 
+                                report[_index].secondVehicle, 
+                                report[_index].fault,
+                                report[_index].description,
+                                report[_index].damage,
+                                report[_index].time
+                                );
+                
+    }
+        
+}

@@ -1,5 +1,6 @@
 
 # Contributions
+12/16 - Final version of slides - Martina, Sharlin, Mirco 
 
 12/16 - Final version CODE - Vittorio
 
@@ -33,4 +34,4 @@
 
 11/30 - First smart contract - Vittorio
 
-11/30 - README.md - Martina
+11/30 - README_progress.md - Martina

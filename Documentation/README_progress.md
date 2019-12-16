@@ -12,12 +12,11 @@ We also discuss how to procede and how to divide the different tasks.
 
 In the repository you will have:
 - A folder with progress of the coding part
-- A folder with the progress and all the notes in word-style that every one can upload or download 
-- A Report that every one can edit 
+- A folder ProjectProgress with the progress and all the notes in word-style that every one can upload or download 
+- A Report that every one can edit from which we take the information to write the slides
 - A txt file in which we write all the references
-- A txt in which at end we will write the contribution of each person, but I am sure 
-that everyone will contribute to every part of this project
-(- we also aim to do brief ppt)
+- A txt in which at end we will write the contribution of each person.
+- A shared ppt presentation.
 
 
 ### We met the second time all the team on 2/12/2019
@@ -50,6 +49,12 @@ Personal contract with all the information about a person
 We tried to make the contracts communicate
 
 ### I sent an e-mail to Benedetta to inform her about our progress 11/12/2019
+
+### We keep working on the coding part 14/12/2019
+
+### Working on the simulation 15/12/2019
+
+### Finishing the PPT 16/12/2019 
 
 
 

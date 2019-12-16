@@ -1,0 +1,157 @@
+pragma solidity ^ 0.5.1;
+
+import "./PersonalProfile.sol";
+
+contract Insurer {
+    
+    address owner; //the address of the insurer
+    uint256 maxCoverage = 8 ether; // the insurance is going to pay the mimimum between this value and the damage
+    uint256 refund; // global variable for payment 
+    
+    // setting the owner
+    constructor() 
+    public 
+        {
+            owner = msg.sender;
+        }
+    
+    // function that returns the balance of the insurer
+    function Balance() public view returns(uint) {
+        return address(this).balance;
+    }
+    
+    function() external payable {} // fallback function such that insurer can receive the money from personal profiles
+    
+    // this struct stores the information of each person
+    struct Insured {
+     
+        string name;
+        string surname;
+        string birth;
+        string licenseID;
+        string vehicle;
+        bool has_payed; // this bool is very important: defaults to false and is set to true when the person pays the premium --> after payment, the person is covered and can get refund
+    }
+    
+    // the mapping goes from an array of addresses (the ones of the personal profiles) to all the info {address : {PersonalInfo}}
+    mapping(address => Insured) all_insured_info;
+    address[] public recorded_accounts_array; // here's the array of addresses
+    
+    // function to insert an insured inside the mapping-struct. It is called by PersonalProfile.sol inside the function "pushToInsurer", when the person shares its information
+    function addInsured(
+                        address _person, string memory _name, string memory _surname, 
+                        string memory _birth, string memory _licenseID, string memory _vehicle)
+        public {
+            Insured storage i = all_insured_info[_person];
+            i.name = _name;
+            i.surname = _surname;
+            i.birth = _birth;
+            i.licenseID = _licenseID;
+            i.vehicle = _vehicle;
+            recorded_accounts_array.push(_person) -1;
+            }
+            
+    //  function to show the personal data of an insured using as key its own address
+    function viewInsured(address _person) public view 
+        returns(string memory, string memory, string memory, string memory, string memory, bool)
+        {
+        return (all_insured_info[_person].name,
+                all_insured_info[_person].surname,
+                all_insured_info[_person].birth,
+                all_insured_info[_person].licenseID,
+                all_insured_info[_person].vehicle,
+                all_insured_info[_person].has_payed
+                );
+        }
+        
+    // function that updates to true the boolean attribute of the struct "Insured" referred to the key _person (which is an address). Called by PersonalProfile in "payAndgetInsurance"
+    function activateInsurance(address _person)
+    public
+    {
+        Insured storage i = all_insured_info[_person];
+        i.has_payed = true;
+    }
+    
+    // part of the refund
+    // we have a PoliceReport struct with all the info of the police report. Remember that it's the person who shares it but the person cannot modify it.
+    struct PoliceReport {
+        string vehicle;
+        string fault; // licenseID of the faulty person
+        uint256 damage;
+        bool eligible; // default = false. whether the person is eligible to be paid or not (see "evaluateEligibility" function)
+        bool has_been_payed; // default = false. whether the person has already received the refund or not
+        }
+        
+    mapping(address => PoliceReport) addresses;
+        address[] public RefundQueue; // all addresses of people asking for a refund are stored in this array of addresses
+        
+    // function to insert data into the above defined mapping-struct. It's the PersonalProfile that calls it inside the function "getRefund".
+    function UpdateReport(address _person, string memory _vehicle, string memory _fault, uint256 _damage) 
+    public 
+    {
+        PoliceReport storage pR = addresses[_person];
+        pR.vehicle = _vehicle;
+        pR.fault = _fault; // licenseID
+        pR.damage = _damage;
+        RefundQueue.push(_person) -1;
+    }
+    
+    // given the address of a person, this function shows all the data of he/she. You can check eligibility and whether has already been paid
+    function ShowRefundRequests(address _person) 
+    public view 
+    returns(string memory, string memory, uint256, bool, bool)
+    {
+        return(addresses[_person].vehicle,
+               addresses[_person].fault, //licenseID
+               addresses[_person].damage,
+               addresses[_person].eligible,
+               addresses[_person].has_been_payed);
+    }
+    // DON'T NEED THIS FUNCTION ANYMORE
+  //  function compareStringsTrue (string memory a, string memory b) public pure
+  //      returns (bool) {
+  //      return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))));
+  //      }
+  
+  function compareStrings (string memory a, string memory b) public pure // returns true if 2 strings are not the same. i use it to assert whether a person is faulty or not.
+        returns (bool) {
+        return (keccak256(abi.encodePacked((a))) != keccak256(abi.encodePacked((b))));
+        }
+    
+    // function that, given an address of a person, compares the fault with the license ID and evaluates the payment. Called by "getRefund"
+    function evaluateEligibility(address _person) 
+    public
+    {
+        PoliceReport storage pR = addresses[_person];
+        Insured storage ins = all_insured_info[_person];
+        // if the insured has paid and the fault inside the report does not match its licenseID, then he is eligible
+        if((ins.has_payed == true) && (compareStrings(pR.fault, ins.licenseID))) {
+            pR.eligible = true; // thus its eligible attribute gets updated
+        }
+        }
+        
+    function getMin(uint val1, uint val2) public pure returns(uint) { // returns the minimum value between two integers. I need it to determine the payment amount: min(maxCoverage, damage). Used inside "payPerson"
+
+        if(val1<val2 || val1 == val2) {
+            return val1;
+        }  
+        else {
+            return val2;
+        }
+    }
+    
+    // function to pay the person. Is called by PersonalProfile inside the function "getRefund". It specifies the amount to be paid using "getMin" and pays a person only if he/she is eligible and has not already been paid
+    
+    function payPerson(address payable _personAddress, address _personKey) public payable {
+
+        PoliceReport storage pR = addresses[_personKey];
+        refund = getMin(maxCoverage, pR.damage * 1 ether); // here I specify the amount
+        if((pR.eligible == true) && (pR.has_been_payed == false)) { // if true, pay
+            _personAddress.transfer(refund);
+            pR.has_been_payed = true; // and set the has_been_payed to true
+           }
+        else {
+            revert(); // revert rhe transaction
+            }
+        }
+}

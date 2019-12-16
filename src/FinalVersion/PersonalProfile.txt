@@ -1,0 +1,188 @@
+pragma solidity ^0.5.1;
+
+import "./InsuranceContract.sol"; 
+
+contract PersonalProfile {
+    
+    address owner = msg.sender;
+    uint payment; // I instantiate this global variable to pay the insurance and get coverage 
+    
+    function() external payable {} // this fallback function enables the person to receive ether whenever an accident occurs and he is eligible to be paid
+    
+    //function that returns the balance of the transactions
+    function MyBalance() public view returns(uint) {
+        return address(this).balance;
+    }
+    
+    struct PersonalInfo // struct containing the personal information
+        {
+        string name;
+        string surname;
+        string birth;
+        string licenseID; // the licenseID will be used later on to evaluate the fault of an accident
+        string vehicle;
+        }
+    
+    // modifier to allow only the owner to update personal info
+    modifier OnlyOwner()
+        {
+            require(msg.sender == owner);
+            _;
+        }
+    
+    // mapping: the struct PersonalInfo has the address as a key
+    mapping(address => PersonalInfo) information;
+        address public my_account; // when I insert personal Info calling "insertPersonalInfo" I will update this to owner = msg.sender,
+    
+    // this function saves in the contract the personal information. It will be pushed to the Insurer calling the function "pushToInsurer"
+    function insertPersonalInfo(string memory _name,
+                                string memory _surname,
+                                string memory _birth,
+                                string memory _licenseID,
+                                string memory _vehicle)
+    public 
+        OnlyOwner // personal info can be updated only by the owner of the profile!
+        {
+        PersonalInfo storage info = information[owner];
+        
+        info.name = _name;
+        info.surname = _surname;
+        info.birth = _birth;
+        info.licenseID = _licenseID;
+        info.vehicle = _vehicle;
+        my_account = owner;
+        }
+    
+    // function to view my personal information
+    function viewPersonalInfo() public view 
+    returns(address, string memory, string memory, string memory, string memory, string memory) 
+        {
+        
+        return (owner,
+                information[owner].name, 
+                information[owner].surname,
+                information[owner].birth,
+                information[owner].licenseID,
+                information[owner].vehicle
+                );
+        }
+        
+    // function that shares personal information with the Insurer    
+    function pushToInsurer(address payable _insuranceAddress)
+    public 
+        {
+            Insurer insurance = Insurer(_insuranceAddress); // here I instantiate the Insurer contract under the variable insurer
+            // and here I call the function "addInsured" inside the Insurer contract ("InsuranceContract.sol" file)
+            insurance.addInsured(
+                                owner, 
+                                information[owner].name, 
+                                information[owner].surname,
+                                information[owner].birth,
+                                information[owner].licenseID,
+                                information[owner].vehicle
+                                );
+        }
+        
+    // In reality I call only this function: this function makes both premium payment and the push of the personal info to Insurance
+    function payAndgetInsurance(address payable _insuranceAddress) public payable {
+        // TOGLIERE COMMENTI
+        Insurer receiver = Insurer(_insuranceAddress); // here again I instantiate the Insurer as receiver of the payment
+        pushToInsurer(_insuranceAddress); // call the function defined before to send the information
+        payment = msg.value; // set the payment equals to msg.value --> you have to define it in the console when you make the transaction
+        // since we're hypotesizing an equal premium of 5 ether for everybody, payment must be equal to 5 ether.
+        // if payment is correct, make the transfer and activate the insurance
+        if(payment == 5*10**18) {
+            _insuranceAddress.transfer(payment);
+            receiver.activateInsurance(owner); // this function changes a boolean value inside the Insurer contract --> that bool specifies that the person has paid (thus is effectively insured) and can get refund
+           }
+        else {
+            revert(); // otherwise the transaction is reverted
+            }
+        }
+    
+    // this modifier allows only the police to push information about accidents record
+    modifier OnlyPolice()
+        {
+            require(msg.sender != owner); // I would have liked to specify the exact account of the police, but in Remix the accounts change. therefore the modifier simply says that everybody can modify but the owner
+            _;
+        }
+    
+    // struct containing the info of a police report. The police will call the function "UpdateHistory" from outside and update this struct
+    struct AccidentsHistory 
+        {
+        string vehicleOwner;
+        string vehicleOther;
+        string fault;
+        string description;
+        uint256 damages;
+        uint256 time;
+        }
+    
+    // also this mapping to the struct will be updated as well whenever the police makes the call
+    mapping(uint256 => AccidentsHistory) accidents;
+        uint256[] public AccidentsArray; // AccidentsArray stores all accidents. It is accessible by index 
+        
+    function howManyAccidents() public view returns(uint256) 
+        {
+        return AccidentsArray.length; // function that returns the length of the AccidentsArray. I use it inside UpdateHistory
+        }
+    
+    // function that inserts
+    function UpdateHistory(
+                           string memory _vehicleOwner, 
+                           string memory _vehicleOther, 
+                           string memory _fault,
+                           string memory _description,
+                           uint256 _damages, 
+                           uint256 _time) 
+        public
+        OnlyPolice // here's the modifier --> the person cannot change the content of its own 
+        {
+        AccidentsHistory storage history = accidents[howManyAccidents()]; // I got the index of the array --> struct using the previously defined function
+        history.vehicleOwner = _vehicleOwner;
+        // assign here all the local variables
+        history.vehicleOther = _vehicleOther;
+        history.fault = _fault;
+        history.description = _description;
+        history.damages = _damages;
+        history.time = _time;
+        AccidentsArray.push(howManyAccidents()) -1; // push the index inside the array in the last position
+        }
+    
+    // function to view an Accidents' info using the index in the array of the mapping
+    function getAccident(uint256 _counter) 
+        view public 
+        returns(string memory, string memory, string memory, string memory, uint256, uint256) 
+        {
+        return (
+        accidents[_counter].vehicleOwner, 
+        accidents[_counter].vehicleOther, 
+        accidents[_counter].fault,
+        accidents[_counter].description, 
+        accidents[_counter].damages, 
+        accidents[_counter].time
+        );
+    }
+    
+    // push the police report to the insurer for the refund
+    
+    function getRefund(address payable _myOwnAddress, address payable _insuranceAddress, uint256 _index) public {
+        // 2 things here
+        Insurer ins = Insurer(_insuranceAddress); // this is the insurer. I will use it to access the person's personal info shared before and some functions
+        AccidentsHistory storage history = accidents[_index]; // this is the accidents' history the insurer receives from the Person (but comes from the police)
+        // I will have to make a comparison between the two types of insertPersonalInfo
+        // first I update the police report
+        ins.UpdateReport(
+                        owner,
+                        history.vehicleOwner,
+                        history.fault,
+                        history.damages
+                         );
+                         
+        // then I evaluate whether the person is eligible or not to be paid. If yes --> boolean for eligible becomes true
+        ins.evaluateEligibility(owner);
+        // if person can be paid, the person is actually paid
+        ins.payPerson(_myOwnAddress, owner);
+    }
+    
+    }
