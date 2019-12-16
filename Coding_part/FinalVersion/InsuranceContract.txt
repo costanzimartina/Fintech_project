@@ -5,7 +5,7 @@ import "./PersonalProfile.sol";
 contract Insurer {
     
     address owner; //the address of the insurer
-    uint256 maxCoverage = 5 ether; // the insurance is going to pay the mimimum between this value and the damage
+    uint256 maxCoverage = 8 ether; // the insurance is going to pay the mimimum between this value and the damage
     uint256 refund; // global variable for payment 
     
     // setting the owner
