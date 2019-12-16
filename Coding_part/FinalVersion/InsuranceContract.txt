@@ -4,7 +4,7 @@ import "./PersonalProfile.sol";
 
 contract Insurer {
     
-    address owner; // the address of the insurer
+    address owner; //the address of the insurer
     uint256 maxCoverage = 8 ether; // the insurance is going to pay the mimimum between this value and the damage
     uint256 refund; // global variable for payment 
     
@@ -51,7 +51,7 @@ contract Insurer {
             recorded_accounts_array.push(_person) -1;
             }
             
-    // function to show the personal data of an insured using as key its own address
+    //  function to show the personal data of an insured using as key its own address
     function viewInsured(address _person) public view 
         returns(string memory, string memory, string memory, string memory, string memory, bool)
         {
@@ -82,4 +82,76 @@ contract Insurer {
         bool has_been_payed; // default = false. whether the person has already received the refund or not
         }
         
-    mapping(address => PoliceReport)
+    mapping(address => PoliceReport) addresses;
+        address[] public RefundQueue; // all addresses of people asking for a refund are stored in this array of addresses
+        
+    // function to insert data into the above defined mapping-struct. It's the PersonalProfile that calls it inside the function "getRefund".
+    function UpdateReport(address _person, string memory _vehicle, string memory _fault, uint256 _damage) 
+    public 
+    {
+        PoliceReport storage pR = addresses[_person];
+        pR.vehicle = _vehicle;
+        pR.fault = _fault; // licenseID
+        pR.damage = _damage;
+        RefundQueue.push(_person) -1;
+    }
+    
+    // given the address of a person, this function shows all the data of he/she. You can check eligibility and whether has already been paid
+    function ShowRefundRequests(address _person) 
+    public view 
+    returns(string memory, string memory, uint256, bool, bool)
+    {
+        return(addresses[_person].vehicle,
+               addresses[_person].fault, //licenseID
+               addresses[_person].damage,
+               addresses[_person].eligible,
+               addresses[_person].has_been_payed);
+    }
+    // DON'T NEED THIS FUNCTION ANYMORE
+  //  function compareStringsTrue (string memory a, string memory b) public pure
+  //      returns (bool) {
+  //      return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))));
+  //      }
+  
+  function compareStrings (string memory a, string memory b) public pure // returns true if 2 strings are not the same. i use it to assert whether a person is faulty or not.
+        returns (bool) {
+        return (keccak256(abi.encodePacked((a))) != keccak256(abi.encodePacked((b))));
+        }
+    
+    // function that, given an address of a person, compares the fault with the license ID and evaluates the payment. Called by "getRefund"
+    function evaluateEligibility(address _person) 
+    public
+    {
+        PoliceReport storage pR = addresses[_person];
+        Insured storage ins = all_insured_info[_person];
+        // if the insured has paid and the fault inside the report does not match its licenseID, then he is eligible
+        if((ins.has_payed == true) && (compareStrings(pR.fault, ins.licenseID))) {
+            pR.eligible = true; // thus its eligible attribute gets updated
+        }
+        }
+        
+    function getMin(uint val1, uint val2) public pure returns(uint) { // returns the minimum value between two integers. I need it to determine the payment amount: min(maxCoverage, damage). Used inside "payPerson"
+
+        if(val1<val2 || val1 == val2) {
+            return val1;
+        }  
+        else {
+            return val2;
+        }
+    }
+    
+    // function to pay the person. Is called by PersonalProfile inside the function "getRefund". It specifies the amount to be paid using "getMin" and pays a person only if he/she is eligible and has not already been paid
+    
+    function payPerson(address payable _personAddress, address _personKey) public payable {
+
+        PoliceReport storage pR = addresses[_personKey];
+        refund = getMin(maxCoverage, pR.damage * 1 ether); // here I specify the amount
+        if((pR.eligible == true) && (pR.has_been_payed == false)) { // if true, pay
+            _personAddress.transfer(refund);
+            pR.has_been_payed = true; // and set the has_been_payed to true
+           }
+        else {
+            revert(); // revert rhe transaction
+            }
+        }
+}
