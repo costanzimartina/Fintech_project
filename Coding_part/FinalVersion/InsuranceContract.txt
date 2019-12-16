@@ -4,7 +4,7 @@ import "./PersonalProfile.sol";
 
 contract Insurer {
     
-    address owner; //the address of the insurer
+    address owner; // the address of the insurer
     uint256 maxCoverage = 8 ether; // the insurance is going to pay the mimimum between this value and the damage
     uint256 refund; // global variable for payment 
     
@@ -51,7 +51,7 @@ contract Insurer {
             recorded_accounts_array.push(_person) -1;
             }
             
-    //  function to show the personal data of an insured using as key its own address
+    // function to show the personal data of an insured using as key its own address
     function viewInsured(address _person) public view 
         returns(string memory, string memory, string memory, string memory, string memory, bool)
         {
