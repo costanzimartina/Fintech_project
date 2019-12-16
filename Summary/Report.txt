@@ -180,11 +180,11 @@ Insured individuals typically find insurance contracts long and confusing while 
 
 ​																				SMART CONTRACTS
 
-* Customizable --> Our set of contracts is customizable, thus they can accommodate the parameters of a policy and execute action automatically through trustless identity verification;
+* Customizable: Our set of contracts is customizable, thus they can accommodate the parameters of a policy and execute action automatically through trustless identity verification;
 
-* Authomatic --> The funds can then be automatically directed to the correct party when a verified event (a claim) triggers the *insurance_contract* on the Ethereum blockchain; 
+* Authomatic: The funds can then be automatically directed to the correct party when a verified event (a claim) triggers the *insurance_contract* on the Ethereum blockchain; 
 
-* Fast and efficient --> Settling a claim can take days or weeks, and our set of smart contracts can settle claims instantly (still we should take into account the *speed* of our blockchain) without the need for paper documents, photocopying, and complex web portals.
+* Efficient: Settling a claim can take days or weeks, and our set of smart contracts can settle claims instantly without the need for paper documents, photocopying, and complex web portals. 
 
   ​																			
 
@@ -196,15 +196,13 @@ Claims processing and management is one of the key business area for the insuran
 * Loss adjustment by the insurance company and other involved parties like the brokers and reinsurer;
 * Claims approval and payment. 
 
-It usually takes time, what if we can authomate it all? Save operational expenses, impacting the IS of the firm, reducing the premium loading, becoming more competitive on the market, eventually growing the customer base and building trust with your clients (*please refer to part 2 of the report to find a description of how our proposal would work and solve such issue*). 
-
-
+It usually takes time, what if we can authomate it all? Save operational expenses, thus impacting the income statement of the firm, reducing the premium loading, eventually growing a larger customer base while building trust with your clients. 
 
 ##### Reduce inefficiencies 
 
 The  authomatic data-entry process of clients' information through SC (faster, more efficient, see how it works in the second part) makes the old practices obsolete, while guaranteeing security over the management of personal data of customers.
 
-- Overall improve trust in insurance companies. A little but siginficant sidenote: at the moment,  6.3% of Italian vehicles  are underinsured. We do not know whether that is purely related to lack of trust in financial services/insurance (it is unlikely.), but a more efficient and transparent system could anyway help insurance companies to restore trust and issue cheaper policies that pay claims within few days.
+- Overall improve trust in insurance companies. A little but siginficant sidenote: at the moment,  6.3% of Italian vehicles  are underinsured. We do not know whether that is purely related to lack of trust in financial services/insurance (it is unlikely), but a more efficient and transparent system could anyway help insurance companies to restore trust and issue cheaper policies that pay claims within few days.
 
   
 
