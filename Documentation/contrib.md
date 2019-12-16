@@ -1,6 +1,8 @@
 
 # Contributions
-12/16 - Final version of slides - Martina, Sharlin, Mirco 
+12/16 - INSTALL file - Martina, Paula
+
+12/16 - Final version of slides - Martina, Sharlin, Mirco, Paula
 
 12/16 - Final version CODE - Vittorio
 
