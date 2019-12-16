@@ -1,5 +1,8 @@
 
 # Contributions
+
+12/16 - Final version CODE - Vittorio
+
 12/15 - Readme_simulation - Martina
 
 12/14 - version 3 CODE - Vittorio
