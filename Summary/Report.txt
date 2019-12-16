@@ -161,11 +161,11 @@ It shall be noted that we cannot know how expenses in the insurance industry aff
 
 * A loading factor that reflects the insurer’s costs of operating the plan  (including administrative expenses and a return on investment). Thus, the lower the loading factor, the lower the premium will be.
 
-* The amount of frauds: the industry continues to see a growing number of uninsured persons and valuables with fraudulent insurance cover. In the UK, for instance, most insurance company have attributed the high cost of car insurance to the rising cost of claims inclusive of fraudulent claims thereby increasing the cost inclusive for honest motorist. Just to provide some figures, fraudulent claims payment cost the insurance sector about $80 billion a year across all lines of insurance which is roughly about 20% of the total claims payment annually. --> We can help insurance firms with this issue too.
+* The amount of frauds: the industry continues to see a growing number of uninsured persons and valuables with fraudulent insurance cover. In the UK, for instance, most insurance company have attributed the high cost of car insurance to the rising cost of claims inclusive of fraudulent claims thereby increasing the cost inclusive for honest motorist. Just to provide some figures, fraudulent claims payment cost the insurance sector about $80 billion a year across all lines of insurance which is roughly about 20% of the total claims payment annually. 
 
   
 
-  Business automation is expected to reduce the cost of claims by over 30% --> Insurance businesses are looking for ways to retain customers and optimise profit. Some insurance companies that are already exploring ways to exploit this technology include Aegon, Allianz, Munich Re, and Swiss Re, which have already set up a combined pilot project known as B3i to explore blockchain. 
+  Business automation is expected to reduce the cost of claims by over 30%: some insurance companies that are already exploring ways to exploit this technology include Aegon, Allianz, Munich Re, and Swiss Re, which have already set up a combined pilot project known as B3i to explore blockchain. 
 
 
 
@@ -182,7 +182,7 @@ Insured individuals typically find insurance contracts long and confusing while 
 
 * Customizable: Our set of contracts is customizable, thus they can accommodate the parameters of a policy and execute action automatically through trustless identity verification;
 
-* Authomatic: The funds can then be automatically directed to the correct party when a verified event (a claim) triggers the *insurance_contract* on the Ethereum blockchain; 
+* Authomatic: The funds can then be automatically directed to the correct party when a verified event (a claim) triggers the *Insurance_contract* on the Ethereum blockchain; 
 
 * Efficient: Settling a claim can take days or weeks, and our set of smart contracts can settle claims instantly without the need for paper documents, photocopying, and complex web portals. 
 
@@ -200,11 +200,11 @@ It usually takes time, what if we can authomate it all? Save operational expense
 
 ##### Reduce inefficiencies 
 
-The  authomatic data-entry process of clients' information through SC (faster, more efficient, see how it works in the second part) makes the old practices obsolete, while guaranteeing security over the management of personal data of customers.
+The  authomatic data-entry process of clients' information through our set of Smart Contracts SC makes the old practices obsolete, while guaranteeing security over the management of personal data of customers.
 
-- Overall improve trust in insurance companies. A little but siginficant sidenote: at the moment,  6.3% of Italian vehicles  are underinsured. We do not know whether that is purely related to lack of trust in financial services/insurance (it is unlikely), but a more efficient and transparent system could anyway help insurance companies to restore trust and issue cheaper policies that pay claims within few days.
+It would improve the overall trust in insurance companies. A little but siginficant sidenote: at the moment,  6.3% of Italian vehicles  are underinsured. We do not know whether that is purely related to lack of trust in financial services/insurance (it is unlikely), but a more efficient and transparent system could anyway help insurance companies to restore trust and issue cheaper policies that pay claims within few days.
 
-  
+
 
 ##### Fraud detection and data analysis
 
