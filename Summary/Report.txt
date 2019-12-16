@@ -4,25 +4,25 @@
 
 The current insurance market presents many negative and controversial aspects that lead to customer dissatisfaction. To mention some problems, the price of a car insurance may vary a lot depending on several factors .Considering the fact that the user does not perceive a tangible value or a real experience from a car insurance, it can be perceived as quite expensive. Furthermore, the process and the contracts themselves can be highly complex and far away from a user-friendly experience. 
 
-Additionally, insurance companies are abled to construct contracts that are favourable or them. Despite the fact that a car insurance can be very expensive, the chances of getting paid out by an insurance are at 5% and it is not even clear how much is covered. Moreover, just 60%-70% of premia are spent on damages, from which 20% is spent on sales and the remaining percentage on the other kind of costs. <!--what do you mean with 20% are spend on sales?--> I have just copied pasted from professor slides, I think that they are sale force costs (maybe also adverts)— Apart from that, the procedures take a very long time. 
+Additionally, insurance companies are abled to construct contracts that are favourable or them. Despite the fact that a car insurance can be very expensive, the chances of getting paid out by an insurance are at 5% and it is not even clear how much is covered. Moreover, just 60%-70% of premia are spent on damages and 20% is spent on sales.
 On the other side and in defence of insurance companies, the system very often allows opportunities to play the system and exploit betterment. Therefore, a solution that leverages transparency and safety is needed. Additionally, it can be used to increase satisfaction. `reducing  costs and making the refunding procedure faster and more efficient and the internal operations of insurance companies, that can reduce costs related to frauds that according to the FBI - the total damages of insurance fraud - exceed $40 billion per year (considering all type of insurances) and they can also streamline the procedure reducing the operating costs. `<!-- dont really understand this part --> streamline in the sense ‘shorter’ —
 
-Due to recent technological development, the insurance market falls under the radar for a technological advancement. A recent report about the Global InsurTech market revealed that the market is expected to grow by 15.63 Billion from 2018 to 2023. This translates to an estimated year-over-year growth of more than 45% for 2019. * $^3$ The apparent issues make room for InsurTech startups that attempt to disrupt the market with digitalized systems. 
+Due to recent technological development, the insurance market falls under the radar for a technological advancement. A recent report about the Global InsurTech market revealed that the market is expected to grow by 15.63 Billion from 2018 to 2023. This translates to an estimated year-over-year growth of more than 45% for 2019. * $^3$ The apparent issues make room for InsurTech startups that attempt to disrupt the market with digitalized systems. However, the biggest threat for traditional companies appear to be well-established tech firms, that could benefit from their data, and therewith their knowledge on the customer. 
 
-A seemingly suitable solution for the mentioned issues of the insurance market are blockchain based technologies. Due to their immutability and transparancy, blockchain based databases should reduce administration costs and especially due to their immutability also the risk of fraud. Additionally, the implementation of smart contracts allows for an automated way of payment. Considering that in the traditional insurance system, payment for claims take weeks or even months, an instant, automated transaction would be a big advancement. Considering the high initial investment cost to implement such a system, the expected entry for blockchain are most likely large short-tail risks, before entering long-term or retail markets. 
+A seemingly suitable solution for the mentioned issues of the insurance market are blockchain based technologies. Due to their immutability and transparancy, blockchain based databases should reduce administration costs and especially due to their immutability also the risk of fraud. Additionally, the implementation of smart contracts allows for an automated way of payment. Considering that in the traditional insurance system, payment for claims take weeks or even months, an instant, automated transaction would be a big advancement. Due to the high initial investment cost to implement such a system, the expected entry for blockchain are most likely large short-tail risks, before entering long-term or retail markets. 
 
 One of the first implementations in the insurance sector are going to market in the beginning of 2020. Owned by a cooperation of 18 insurance market participants around the globe, *B3i* is building a platform on distributed ledger technology to  create a "single source of truth" opposing to decentralized and obscure data systems. The ambition is to be able to optimise the  processes in the market  and reduce the costs significantly. 
 
 B3i's concept is that every node processes and verifies each activity. In this way, there exisits a common consensus about the validity of a transaction. Furthermore, every entry on the ledger are immutable to ensure transparency and trust. Through smart contracting asset transfers are automatically validated and enforced, while they ensure that only the nodes involved in the transaction can access the information. 
 
-One of the first implementations in the insurance sector are going to market in the beginning of 2020. Owned by a cooperation of 18 insurance market participants around the globe, *B3i* is building a platform on distributed ledger technology to  create a "single source of truth" opposing to decentralized and obscure data systems. The ambition is to be able to optimise the  processes in the market  and reduce the costs significantly. 
+One of the first implementations in the insurance sector are going to market in the beginning of 2020. Owned by a cooperation of 18 insurance market participants around the globe, *B3i* is building a platform on distributed ledger technology to  create a "single source of truth" in contrast to to decentralized and obscure data systems. The ambition is to be able to optimise the  processes in the market  and reduce the costs significantly. 
 
 B3i's concept is that every node processes and verifies each activity. In this way, there exisits a common consensus about the validity of a transaction. Furthermore, every entry on the ledger are immutable to ensure transparency and trust. Through smart contracting asset transfers are automatically validated and enforced, while they ensure that only the nodes involved in the transaction can access the information. 
 
 #### Project Goals
-This project aims to address some of the main issues - above mentioned -  linked to the field of car insurances by implementing a blockchain based smart contracting on Ethereum. 
+By implementing a blockchain based smart contracting on Ethereum, this project aims to address some of the main above mentioned issues linked to the field of car insurances.
 
-The purpose of this project is to redesign the procedure that starts from the creation of a car insurance contract to the expiration of the contract itself, passing through the management of a car accident and all the related practices. The major goal and the focus is on making the procedure more efficient and safe. Indeed Blockchain-based networks can from one side secure customer data and improve customer experience, from the side of insurance companies it can prevent frauds, automate payments through smart contracts and therefore reduce the operating costs enhance productivity.  in order to  and the costs related to frauds
+The purpose of this project is to redesign the procedure that starts from the creation of a car insurance contract to the expiration of the contract itself, passing through the management of a car accident and all other related practices. The focus lays on making the procedure more efficient and safe by picking up on the strength of blockchain-based networks: it can secure customer data, improve customer experience,  prevent fraud and automate payments through smart contracts. Therefore, it can reduce  operating costs enhance productivity.  <!-- in order to  and the costs related to frauds --> 
 
 
 #### Process Flow 
@@ -44,7 +44,7 @@ The system consists of three main smart contracts:
 
   It's the contract between the driver and the insurance company. 
 
-  Once it receives the information about the accident it processes all the data and it evaluates if it is possible to provide a compensation or not; if the outcome is positive the insurance should automatically provide for reimbursement. 
+  Once it receives the information about the accident, it processes all the data and evaluates if it is possible to provide a compensation or not. If the outcome is positive, the insurance should automatically provide the reimbursement. 
 
 The implementation of the smart contracts was performed on Remix using Solidity version 0.5.1. 
 
@@ -52,7 +52,7 @@ The implementation of the smart contracts was performed on Remix using Solidity 
 
 ###### PERSONAL CONTRACT
 
-The personal_contract is created when a person obtains the license. It contains the most relevant information regarding the individual such as:
+The personal_contract is created when a person obtains his or her license. It contains the most relevant information regarding the individual such as:
 
 - Name
 - Surname
@@ -63,7 +63,7 @@ It has two main functions:
 
 1. Having all the information about the person, including also his past history, which is a useful tool for insurance companies to calculate the risk premium. Furthermore, since it is based on a blockchain system it is incorruptible, thus the person can’t lie about his previous ‘incident history’ since all the essential information to compute the risk premium and to stipulate a new contract are blocked in the blockchain (therefore preventing frauds).
 
-2. When an accident happens, the police draw up a report with all the information regarding the accident (see below), this report is ‘pushed’ and it updates the personal_contract, which in turn gives an external data feed to the insurance_contract. The latter when receives the information about the accident and starts to process the data. 
+2. When an accident happens, the police draws up a report with all the information regarding the accident (see below), this report is ‘pushed’ and it updates the personal_contract, which in turn gives an external data feed to the insurance_contract. The latter then receives the information about the accident and starts to process the data. 
 
 Essentially, the *'personal_contract'* is a sort of ‘incorruptible’ identification card that can be only updated by an official source/node, which is the police (through the police reports). It is useful because the *'insurace_contract’* is based on the information that the *'personal_contract'* contains, both regarding the computation of the risk premium and the  the resolution of an accident practice.
 ——————  codice—————
@@ -106,10 +106,10 @@ The *'insurance_contract'* is the contract stipulated by the insurance to the in
 ```
 
 Just some notes
-#further steps: the personal contract should send some money (risk premium) in order to create the insurance contract. then the insurance contract can use that money to process the data. it has also to verify if the police report is valid and then it can provide the refund
+#further steps: the personal contract should send some money (risk premium) in order to create the insurance contract. Then the insurance contract can use that money to process the data. It also has to verify if the police report is valid to provide the refund. 
 
-the police report should emit en event that will be available on the blockchain.
-Outside of ethreum blockchain there is a an application that check if an event happens (it is a sort of a loop) if the event occurs it notify it to the person that has to send the message to the insurance that should provide the verification of the report and eventually provide a refund. This is because it does not makes sense that the police pays for the notify it to the insurer. 
+The police report should emit en event that will be available on the blockchain.
+`Outside of Ethreum's blockchain there is an application that checks if an event happens (it is a type of loop). If the event occurs, it notifies the person that has to send the message to the insurance that should provide the verification of the report and eventually provide a refund. This is because it does not makes sense that the police pays for the notifcation to the insurer.` <!-- this marked bit is a bit unclear --> 
 
 
 #### Proposal Assessment
@@ -120,13 +120,14 @@ Assess Proposal and what has been done
 
 # **The Economics behind it**
 
-Blockchain can help insurers deliver on streamlined subrogation, a more transparent claims process, and support more efficient payments between insurers and third parties, especially during the claims process. Such breakthrough leads to lowering operational cost and automated redundant processes indeed, while providing more sophisticated pricing through distributed loss histories prospective customers. In the specific case of vehicle insurance, blockhain and smart contracts can assist drivers in getting more affordable quotes (lower premiums as a result of a more efficient business model) and resolve their accident claims faster (authomatic payment of claims through smart contracts).
 
-* PLEASE NOTE THAT: We cannot know how expenses in the insurance industry affect the premiums paid by customers, but what's certain is that part of the payment to the service provided to the client comes in the form of ordinary/administrative expenses (related to underwriting process, claim processing, etc). We assumed that as we decrease those expenses that are built inside the premium, clients would benefit from it by paying a lower amount each year and insurers would grow their customer base given a more efficient BM, which allows for lower quotes for clients and for more customers that can be managed. 
+Blockchain can help insurers deliver on streamlined subrogation, a more transparent claims process, and support more efficient payments between insurers and third parties, especially during the claims process. Such breakthrough leads to lowering operational cost and automated redundant processes indeed, while providing more sophisticated pricing through distributed loss histories prospective customers. In the specific case of vehicle insurance, blockhain and smart contracts can assist drivers in getting more affordable quotes (lower premiums as a result of a more efficient business model) and resolve their accident claims faster (authomatic payment of claims through smart contracts)
+
+Blockchain can help insurers deliver on streamlined subrogation, a more transparent claim process, and support more efficient payments between insurers and third parties, especially during the claim process. Such a breakthrough leads to lower operational cost `and automated redundant processes. In the specific case of vehicle insurance, blockhain and smart contracts can assist drivers in getting more affordable rates (lower premiums as a result of a more efficient business model) and resolve their accident claims faster (automatic payment of claims through smart contracts).
 
 #### Expenses figures
 
-Expenses incurred by 4 major listed insurance groups (net and as % of total expenses) --> Research done on Orbis database and IS seen on annual reports to investors of the companies.
+Expenses incurred by 4 major listed insurance groups (net and as % of total expenses). The research has been conducted on Orbis database and on companies' annual reports to investors.
 
 ALLIANZ
 
@@ -148,25 +149,26 @@ AXA
 - Administrative Expenses: €10,976m
 - Overall 10.49% of Total Expenses
 
-Insurance companies incur in administrative expenses that are mostly related to personnel and office expenses (namely claim processing, data gathering = time consuming practices). On average, in multiline* insurance companies these expenses account for 10% of the GWP (Gross Written Premium, the profit of insurance companies). 
+Insurance companies incur administrative expenses that are mostly related to personnel and office expenses, namely claim processing, data gathering which are time consuming practices. On average, in multiline insurance companies these expenses account for 10% of the GWP (Gross Written Premium, the profit of insurance companies). We took multiline insurance companies as it is impossible with the data we have to find specific expenses for vehicle insurance incurred by firms. Multiline insurances (vehicle, property & casualty, etc) are here distinguished from life/health insurance. 
 
-* We took multiline insurance companies as it is impossible with the data we have to find specific expenses for vehicle insurance incurred by firms. Multiline insurances (vehicle, property & casualty, etc) are here distinguished from life/health insurance*.
+At the same time, non-life premium growths are globally on the rise. The US is  leading the way with an increase of 2.7% of its premium for non-life insurances, with the motor segment powering the advance (72.4% of total non-life premiums). The US is followed by EMEA and ASIA/PACIFIC. EMEA recorded a growth of 1.1% in 2018, which is below the increase of 2.7% in 2017 but still above the 10-year average of 0.7%.  ASIA/PACIFIC registered a rise of 1.2% of its non-life premiums. As the data provided is limited, it shall once again be noted that non-life insurance premiums are taken as proxies for vehicle insurance premiums. However, the validity of the approximation is given by the fact that the motor segment represent the largest part of the premiums paid for non-life type of insurances (more than 70% in the US, ASIA/PACIFIC and EMEA). 
 
-At the same time, non-life premium growths are globally on the rise, with the US leading the way with an increase of 2.7% of its premium for non-life insurances, with motor segment powering the advance (72.4% of total non-life premiums); followed by EMEA, which displayed a growth of 1.1% in 2018, below the 2.7% of 2017 but still above the 10-year average of 0.7%, and ASIA/PACIFIC, with a rise of 1.2% of its non-life premiums. Again, it shall be noted that I took non-life insurance premiums as proxies for vehicle insurance premiums as the data provided are limited: however, the validity of my approximation is given by the fact that the motor segment represent the largest slice of the premiums paid for non-life type of insurances (more than 70% in the US, ASIA/PACIFIC and EMEA). 
+It shall be noted that we cannot know how expenses in the insurance industry affect the premiums paid by customers, but what is certain is that part of the payment to the service provided to the client comes in the form of ordinary/administrative expenses (related to underwriting process, claim processing, etc). We assumed that as we decrease those expenses that are built inside the premium, clients would benefit from it by paying a lower amount each year and insurers would grow their customer base given a more efficient business model, which allows for lower quotes for clients and for more customers that can be managed. 
 
-What are the most determinant factors that cause fluctuations in the value of premium of an individual's insurance plan? 
+#### What are the most determinant factors that cause fluctuations in the value of premium of an individual's insurance plan? 
 
-* Insured behaviour --> Bonus/Malus mechanism of premium adjustment every year. Insureds' risk is assessed during the underwriting process whenever the insurer issues a new policy, and it is associated to a given category of risk, which is updated every year according to the its behavior (frequency and severity of claims).
+* Insured behaviour: Bonus/Malus mechanism of premium adjustment every year. Insureds' risk is assessed during the underwriting process whenever the insurer issues a new policy, and it is associated to a given category of risk, which is updated every year according to the its behavior (frequency and severity of claims).
 
-* Loading factor that reflects the insurer’s costs of operating the plan  (including administrative expenses and a return on investment) --> Lower the loading factor = Lower the premium, this is one of our targets.
+* A loading factor that reflects the insurer’s costs of operating the plan  (including administrative expenses and a return on investment). Thus, the lower the loading factor, the lower the premium will be.
 
-* Frauds --> The industry continues to see a growing number of uninsured persons and valuables with fraudulent insurance cover. In the UK, for instance, most insurance company have attributed the high cost of car insurance to the rising cost of claims inclusive of fraudulent claims thereby increasing the cost inclusive for honest motorist. Just to provide some figures, fraudulent claims payment cost the insurance sector about $80 billion a year across all lines of insurance which is roughly about 20% of the total claims payment annually. --> We can help insurance firms with this issue too.
+* The amount of frauds: the industry continues to see a growing number of uninsured persons and valuables with fraudulent insurance cover. In the UK, for instance, most insurance company have attributed the high cost of car insurance to the rising cost of claims inclusive of fraudulent claims thereby increasing the cost inclusive for honest motorist. Just to provide some figures, fraudulent claims payment cost the insurance sector about $80 billion a year across all lines of insurance which is roughly about 20% of the total claims payment annually. --> We can help insurance firms with this issue too.
 
   
 
   Business automation is expected to reduce the cost of claims by over 30% --> Insurance businesses are looking for ways to retain customers and optimise profit. Some insurance companies that are already exploring ways to exploit this technology include Aegon, Allianz, Munich Re, and Swiss Re, which have already set up a combined pilot project known as B3i to explore blockchain. 
 
-  ### 														
+
+
 
   ### 													How to create value in insurance with Blockchain Technology?
 
