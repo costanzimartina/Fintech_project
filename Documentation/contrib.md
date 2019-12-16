@@ -14,7 +14,7 @@
 
 12/11 - Report file update - Paula, Martina
 
-12/11 - Starting the ppt presentation - Sharlin, Paula, Mirco, Martina, Vittorio
+12/11 - Starting the ppt presentation - Sharlin, Paula, Mirco, Martina
 
 12/11 - Coding part, second and third smart contract- Martina, Vittorio
 
