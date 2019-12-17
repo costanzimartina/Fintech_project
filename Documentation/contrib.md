@@ -1,12 +1,14 @@
 
 # Contributions
-12/16 - INSTALL file - Martina, Paula
+12/17 - All the material has been revised and corrected - Paula, Sharlin, Mirco, Martina, Vittorio
+
+12/16 - Reviewed INSTALL file - Martina, Paula
 
 12/16 - Final version of slides - Martina, Sharlin, Mirco, Paula
 
 12/16 - Final version CODE - Vittorio
 
-12/15 - Readme_simulation - Martina
+12/15 - Scenario simulation - Martina
 
 12/14 - version 3 CODE - Vittorio
 
