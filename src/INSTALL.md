@@ -1,4 +1,4 @@
-**SIMULATION OF A POSSIBLE SCENARIO**
+## SIMULATION OF A POSSIBLE SCENARIO ##
 
 In the following lines we are going to provide you a simulation of how our prototype works. We assume to have four players: **two individuals** that create their own personal profile and buy a car insurance, the **Police** submitting accident’s reports as an official source, and the **Insurer** which collects the premia from the individuals and provides them coverage.
 
@@ -45,7 +45,7 @@ This information - ideally - should be useful for estimating the risk premium, b
 - Now if you click on *viewPersonalInfo*, you can see all the information.
 - Try to use the function *UpdateHistory*: this function is used by the police to push a report - about a car accident - to a personal profile. As you can see the transaction is reverted, since the individual can just initialize his state but can’t update it, only the police can.
 - If you click on *howManyAccidents* you can see that now we have 0 accidents. 
--  Now copy the InsurerContract address from the symbol (the one circled in red) <img src="https://github.com/costanzimartina/Fintech_project/blob/master/Documentation/ProjectProgress/InsurerContract.png?raw=true" style="zoom:25%;" />
+-  Now copy the InsurerContract address from the symbol (the one circled in red) <img src="https://github.com/costanzimartina/Fintech_project/blob/master/Documentation/ProjectProgress/InsurerContract.png?raw=true" style="zoom:5%;" />
 
 - Paste it in the function *payAndgetInsurance*, select a value of 5 ethers and click on transact, in this way the Person_1 provides all his personal information to the insurance company (be sure     that the account is the one that you used to deploy the PersonalContract) and pays the risk premium.
 - Go to the InsurerContract, in *recorded_accounts_array* select 0 (the index of the first person who passed his own information), as you can see now there is one address that is the account of Person_1. Paste this address in the *viewInsured* function and as   you can see now you have all the information about Person_1, pay attention at the line 5 where you have *bool: true*, it means that the person has paid the risk premium and he is insured.
