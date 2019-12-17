@@ -1,7 +1,9 @@
 ## SIMULATION OF A POSSIBLE SCENARIO ##
 
-In the following lines we are going to present you a simulation of how our prototype works. We assume to have four players: **two individuals** that create their own personal profile and buy a car insurance, the **Police** submitting accident’s reports as an official source, and the **Insurer** which collects the premia from the individuals and provides them coverage.
+In the following lines we are going to present you a simulation of how our prototype works. 
+For this purpose we are going to use **Remix**, a web browser based IDE that allows you to write, deploy and run Solidity smart contract. You can find the files to use in the *FinalVersion_code* folder. 
 
+We assume to have four players: **two individuals** that create their own personal profile and buy a car insurance, the **Police** submitting accident’s reports as an official source, and the **Insurer** which collects the premia from the individuals and provides them coverage.
 We have three solidity-based *Smart Contracts* that can be instantiated in order to represent our entities: **PersonalProfile,** which manages all the individual’s personal information, **InsurerContract**, which is used by the Insurer to manage the relationships with individuals, and **PoliceReport**, which enables the police to document traffic accidents. Note that every Smart Contract should be deployed using a different account, since each is used by a different entity. 
 
  
@@ -26,7 +28,7 @@ We have three solidity-based *Smart Contracts* that can be instantiated in order
 
 **Procedure**
 
-We start with the deployment of the insurance company through the InsurerContract:
+We start with the deployment of the insurance company through the InsurerContract smart contract:
 
 - *Compile* InsurerContract.
 - Select an account and *Deploy* the contract.
