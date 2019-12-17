@@ -75,19 +75,19 @@ Deploy PoliceReport: this smart contract, as we have already said, is an officia
 - Select a different account that this time represents the police and click on *Deploy*. 
 - Select the function *updateReport* and insert all the information: 
 
-_address1: address of the PersonalProfile of Person_1; 
+  _address1: address of the PersonalProfile of Person_1; 
 
-_address2: address of the PersonalProfile of Person_2; 
+  _address2: address of the PersonalProfile of Person_2; 
 
-first_vehicle: the license plates of Person_1 car;
+  first_vehicle: the license plates of Person_1 car;
 
-second_vehicle: the license plates of Person_2 car;
+  second_vehicle: the license plates of Person_2 car;
 
-fault: the ID licence of Person_1, who is at fault; 
+  fault: the ID licence of Person_1, who is at fault; 
 
-description: just a brief description of the accident;
+  description: just a brief description of the accident;
 
-damage: the estimated amount of damage of the car ‘without fault’. Let us select 2 ethers for this case. 
+  damage: the estimated amount of damage of the car ‘without fault’. Let us select 2 ethers for this case. 
 
 - Now, if you click on *howManyReports,* it returns the number 1 and if you select 0 in the function *viewReport* you can see all the information about the report that we have just recorded.  
 
@@ -105,9 +105,9 @@ Go to the personalprofile of Person_2 (select the right account!)
 
 Before of providing the reimbursement, the insurer has checked two conditions related to Person_2 that must be True:
 
-\1.   Person_2 must have paid the risk premium and therefore he must be insured;
+1. Person_2 must have paid the risk premium and therefore he must be insured;
 
-\2.   With regard to the accident, it’s not his fault.
+2. With regard to the accident, it’s not his fault.
 
 If these two conditions are satisfied the Insurer automatically provide the refund. 
 
