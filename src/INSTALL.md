@@ -120,6 +120,6 @@ Go to the Personalprofile of Person_1, selecting the right account:
 - This time it’s different from the previous procedure, indeed the transaction is reverted, because Person_1 – since it’s his fault – is not entitled to get a refund. 
 - If you click on *MyBalance* you have 0 and if you go to the InsurerContract you can observe that anything has changed. The insurer Balance is still 8 ethers. 
 
-**NOTE**: Both people in order to request the refund pays a little amount of ether, but we decided that the cost of notifying the accident is at their expense. It represents a sort of effort that even in practice they should have taken to notify the accident to their insurance company. 
+**NOTE**: A person that request a refund pays a little amount of ether, but we decided that the cost of notifying the accident is at his expense. It represents a sort of effort that even in practice he should have taken to notify the accident to his insurance company. 
 
  
