@@ -1,8 +1,7 @@
-
 # Contributions
-12/17 - All the material has been revised and corrected - Paula, Sharlin, Mirco, Martina, Vittorio
+12/17 - All the material has been revised and corrected - Martina, Paula, Sharlin, Mirco, Vittorio
 
-12/16 - Reviewed INSTALL file - Martina, Paula
+12/16 - Reviewed INSTALL file - Sharlyn, Paula, Mirco, Martina
 
 12/16 - Final version of slides - Martina, Sharlin, Mirco, Paula
 
@@ -14,11 +13,11 @@
 
 12/12 - Powerpoint presentation file - Paula
 
-12/12 - Coding part third smart contract - Vittorio, Martina 
+12/12 - Coding part third smart contract - Vittorio, Martina
 
 12/11 - Report file update - Paula, Martina
 
-12/11 - Starting the ppt presentation - Sharlin, Paula, Mirco, Martina
+12/11 - Starting the ppt presentation - Sharlin, Paula, Mirco, Martina, Vittorio
 
 12/11 - Coding part, second and third smart contract- Martina, Vittorio
 
