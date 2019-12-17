@@ -45,7 +45,7 @@ This information - ideally - should be useful for estimating the risk premium, b
 - Now if you click on *viewPersonalInfo*, you can see all the information.
 - Try to use the function *UpdateHistory*: this function is used by the police to push a report - about a car accident - to a personal profile. As you can see the transaction is reverted, since the individual can just initialize his state but can’t update it, only the police can.
 - If you click on *howManyAccidents* you can see that now we have 0 accidents. 
--  Now copy the InsurerContract address from the symbol (the one circled in red) <img src="/Users/martinacostanzi/Documents/GitHub/Fintech_project/src/InsurerContract.png" style="zoom:25%;" />
+-  Now copy the InsurerContract address from the symbol (the one circled in red) <img src="https://github.com/costanzimartina/Fintech_project/blob/master/src/InsurerContract.png?raw=true" style="zoom:33%;" />
 
 - Paste it in the function *payAndgetInsurance*, select a value of 5 ethers and click on transact, in this way the Person_1 provides all his personal information to the insurance company (be sure     that the account is the one that you used to deploy the PersonalContract) and pays the risk premium.
 - Go to the InsurerContract, in *recorded_accounts_array* select 0 (the index of the first person who passed his own information), as you can see now there is one address that is the account of Person_1. Paste this address in the *viewInsured* function and as     you can see now you have all the information about Person_1, pay attention at the line 5 where you have *bool: true*, it means that the person has paid the risk premium and he is insured.
@@ -65,7 +65,7 @@ Initialize Person_2 with PersonalProfile:
  
 
 Now suppose that Person_1 did not give priority to Person_2 and caused an accident. Since it is fault of Person_1 while Person_2 has no fault, the latter will be eligible to get a refund while the former should pay with his own money his own damage. 
- 
+
 
 Deploy PoliceReport: this smart contract, as we have already said, is an official source and it is authorized by the police:
 
@@ -92,12 +92,12 @@ damage: the estimated amount of damage of the car ‘without fault’, let’s s
 **NOTE**: In this way the police updates both the history of PersonalProfile of Person_1 and Person_2, even though in this simulation we have not included the computation of the risk premium, information about ‘history’ would be very useful for the insurer in order to compute it.
 
 The police pays a little amount of ether in order to update the history of both people, but we assume that they are essential costs that fall under the Public Administration. 
- 
+
 
 Go to the personalprofile of Person_2 (select the right account!)
 
 - Click on *howManyAccident*, as you can see now it returns 1, and if in the function *getAccident* you write 0 (the index of the     first accident) the function returns all the information about the first     car accident.
-- In the function *getRefund* copy paste from <img src="/Users/martinacostanzi/Documents/GitHub/Fintech_project/src/CopyPaste.png" style="zoom: 50%;" /> both the address of the     InsurerContract and Person_2 PersonalProfile address, in the index field select the index of the accident for which you want to request a refund, in this case is 0, then click on transact. 
+- In the function *getRefund* copy paste from both the address of the     InsurerContract and Person_2 PersonalProfile address, in the index field select the index of the accident for which you want to request a refund, in this case is 0, then click on transact. 
 - Now click on *MyBalance*, as you can see now it amounts at 2 Ether! That is the amount of the damage written in the PoliceReport. 
 
 Before of providing the reimbursement, the insurer has checked two conditions related to Person_2 that must be True:
